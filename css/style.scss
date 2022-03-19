@@ -1,0 +1,25 @@
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$med-grey: hsl(216, 12%, 54%);
+$blue: hsl(213, 19%, 18%);
+$dark-blue: hsl(216, 12%, 8%);
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  background: $dark-blue;
+}
