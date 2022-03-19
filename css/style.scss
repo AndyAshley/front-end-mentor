@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
 $orange: hsl(25, 97%, 53%);
 $white: hsl(0, 0%, 100%);
 $light-grey: hsl(217, 12%, 63%);
@@ -19,7 +21,163 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Manrope", sans-serif;
-  font-size: 13px;
+  flex-direction: column;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
   background: $dark-blue;
+  padding: 1.5rem;
+}
+
+.rating-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 20px rgba($color: black, $alpha: 0.3);
+  background-image: linear-gradient(30deg, hsla(216, 12%, 8%, 0.6) 50%, transparent 100%);
+  background-color: $blue;
+  @media (min-width: 768px) {
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+  .star-img {
+    background: $blue;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-image: url(../images/icon-star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14px, 14px;
+  }
+  h1 {
+    color: $white;
+    font-size: 1.5rem;
+    margin: 1.5rem 0rem 1rem 0rem;
+  }
+  p {
+    color: $light-grey;
+    font-size: 0.9em;
+    line-height: 1.4rem;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0rem 1.5rem 0rem;
+    list-style: none;
+    color: $med-grey;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      padding-top: 4px;
+      font-size: 14px;
+      border-radius: 20px;
+      background: $blue;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        background: $light-grey;
+        color: $white;
+      }
+      @media (min-width: 768px) {
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+      }
+    }
+    .active {
+      color: white;
+      background: hsl(25, 97%, 53%);
+    }
+  }
+  .submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $orange;
+    text-align: center;
+    color: $white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:active {
+      color: $orange;
+      background: $white;
+    }
+    span {
+      margin: 0rem;
+    }
+    @media (min-width: 768px) {
+      margin-bottom: 0rem;
+      padding: 0.7rem;
+    }
+  }
+}
+
+.thank-you-card {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  max-width: 375px;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 20px rgba($color: black, $alpha: 0.3);
+  background-image: linear-gradient(to top, hsla(216, 12%, 8%, 0.8) 0%, transparent 100%);
+  background-color: $blue;
+  @media (min-width: 768px) {
+    padding: 2rem 1.5rem;
+    border-radius: 2rem;
+  }
+  img {
+    max-width: 150px;
+    height: auto;
+  }
+  .rating {
+    padding: 0.5rem 0.8rem;
+    background: $blue;
+    color: hsl(25, 63%, 56%);
+    border-radius: 1rem;
+    margin: 1.5rem 0rem;
+    @media (min-width: 768px) {
+      padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+    }
+  }
+  h2 {
+    color: white;
+    margin-bottom: 1rem;
+    @media (min-width: 768px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  p {
+    color: $light-grey;
+    text-align: center;
+    line-height: 1.4rem;
+    font-size: 15px;
+    @media (min-width: 768px) {
+      font-size: 14.5px;
+    }
+  }
+}
+
+.attribution {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 11px;
+  text-align: center;
+  color: $med-grey;
+  a {
+    color: $orange;
+  }
 }
