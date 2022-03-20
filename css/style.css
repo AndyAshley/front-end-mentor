@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+}
+
+.text-input.active {
+  border: 1px solid #ff5263;
+  opacity: 1;
+}
+.text-input.active::-moz-placeholder {
+  color: #ff5263;
+}
+.text-input.active:-ms-input-placeholder {
+  color: #ff5263;
+}
+.text-input.active::placeholder {
+  color: #ff5263;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  height: 100%;
+  padding: 2rem 0rem 0rem 0rem;
+}
+@media (min-width: 1024px) {
+  .main-container {
+    height: 100vh;
+  }
+}
+.main-container header {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 0rem 2rem;
+}
+.main-container header img {
+  margin-bottom: 1.5rem;
+}
+.main-container header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.main-container header h1 span {
+  color: #969696;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .main-container header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+}
+@media (min-width: 1024px) {
+  .main-container header h1 {
+    margin-top: 1rem;
+    font-size: 3rem;
+  }
+}
+.main-container header p {
+  font-size: 13px;
+}
+@media (min-width: 768px) {
+  .main-container header p {
+    font-size: 22px;
+    font-weight: 300;
+  }
+}
+.main-container form {
+  width: 100%;
+  padding: 0rem 2rem;
+}
+@media (min-width: 650px) {
+  .main-container form {
+    padding: 0rem 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .main-container form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    padding: 0;
+  }
+}
+.main-container form .form-inputs {
+  width: 100%;
+}
+.main-container form .form-inputs input {
+  height: 40px;
+  padding-left: 1.5rem;
+  border-radius: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+  outline: none;
+  border: 1px solid rgba(150, 150, 150, 0.8);
+  opacity: 0.6;
+}
+.main-container form .form-inputs input::-moz-placeholder {
+  color: #969696;
+}
+.main-container form .form-inputs input:-ms-input-placeholder {
+  color: #969696;
+}
+.main-container form .form-inputs input::placeholder {
+  color: #969696;
+}
+@media (min-width: 1024px) {
+  .main-container form .form-inputs input {
+    margin-top: 0rem;
+    padding-left: 2rem;
+    width: 95%;
+    height: 59px;
+    font-size: 18px;
+  }
+}
+.main-container form .form-inputs .error-text {
+  display: none;
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+  color: #ff5263;
+  margin-top: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .main-container form .form-inputs .error-text {
+    text-align: left;
+    margin-left: 1.5rem;
+  }
+}
+.main-container form .notify-button {
+  height: 40px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  width: 100%;
+  background: #4f7df3;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px #c2d3ff;
+}
+.main-container form .notify-button:hover {
+  opacity: 0.8;
+}
+@media (min-width: 1024px) {
+  .main-container form .notify-button {
+    margin-top: 0rem;
+    padding: 1.2rem;
+    width: 300px;
+    height: 60px;
+    font-size: 18px;
+  }
+}
+.main-container .main-image {
+  display: flex;
+  justify-content: center;
+}
+.main-container .main-image img {
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+  width: 100%;
+  height: auto;
+  padding: 0rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .main-container .main-image img {
+    max-width: 650px;
+  }
+}
+.main-container .social-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container .social-section .social-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main-container .social-section .social-container .social-icon {
+  position: relative;
+  height: 37px;
+  width: 37px;
+  margin: 0.5rem;
+  border: 2px solid rgba(150, 150, 150, 0.2);
+  padding: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.main-container .social-section .social-container .social-icon:hover {
+  background: #4f7df3;
+}
+.main-container .social-section .social-container .social-icon:hover i {
+  color: white;
+}
+.main-container .social-section .social-container .social-icon i {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  color: #4f7df3;
+  font-size: 16px;
+}
+.main-container .social-section .social-container .social-icon .fa-facebook-f {
+  left: 12px;
+}
+.main-container .social-section p {
+  margin-top: 1rem;
+  color: #969696;
+  font-size: 11px;
+}
+.main-container .attribution {
+  margin-top: 1rem;
+  font-size: 11px;
+  text-align: center;
+  color: #969696;
+}
+.main-container .attribution a {
+  color: #4f7df3;
+}/*# sourceMappingURL=style.css.map */
