@@ -222,7 +222,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 25px;
+  top: 5vh;
   right: 0;
   height: 75px;
   width: 250px;
@@ -257,7 +257,7 @@ body {
   }
 
   @media (max-width: 475px) {
-    top: 550px;
+    top: 80vh;
     right: 0;
   }
   @keyframes progress-bar {
