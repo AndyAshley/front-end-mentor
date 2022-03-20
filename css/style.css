@@ -275,7 +275,7 @@ body {
 }
 @media (max-width: 475px) {
   .toast {
-    top: 650px;
+    top: 550px;
     right: 0;
   }
 }
