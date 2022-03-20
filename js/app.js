@@ -1,6 +1,7 @@
 // get dom elements
 ratingCard = document.getElementById("rating-card");
 thankYouCard = document.getElementById("thank-you-card");
+innerWrapper = document.getElementById("inner-wrapper");
 buttonOne = document.getElementById("button-1");
 buttonTwo = document.getElementById("button-2");
 buttonThree = document.getElementById("button-3");
@@ -104,8 +105,7 @@ function submitRating() {
   if (numberRating == "") {
     return;
   } else {
-    ratingCard.style.display = "none";
-    thankYouCard.style.display = "flex";
+    innerWrapper.style.transform = "rotateY(-180deg)";
     userRating.innerText = numberRating;
   }
 }

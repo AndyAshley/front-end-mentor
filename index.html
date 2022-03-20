@@ -16,47 +16,50 @@
 <body>
   <main>
     <div class="card-wrapper">
-      <!-- Rating state start -->
-      <div class="rating-card" id="rating-card">
-        <div class="star-img"></div>
-        <h1> How did we do?</h1>
-        <p>
-          Please let us know how we did with your support request. All feedback is appreciated
-          to help us improve our offering!
-        </p>
-        <ul id="number-list">
-          <li id="button-1" role="button" onclick="oneStar()">1</li>
-          <li id="button-2" role="button" onclick="twoStar()">2</li>
-          <li id="button-3" role="button" onclick="threeStar()">3</li>
-          <li id="button-4" role="button" onclick="fourStar()">4</li>
-          <li id="button-5" role="button" onclick="fiveStar()">5</li>
-        </ul>
-        <div class="submit-button" role="button" onclick="submitRating()">
-          <span>Submit</span>
+      <div class="inner-wrapper" id="inner-wrapper">
+        <!-- Rating state start -->
+        <div class="rating-card" id="rating-card">
+          <div class="star-img"></div>
+          <h1> How did we do?</h1>
+          <p>
+            Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!
+          </p>
+          <ul id="number-list">
+            <li id="button-1" role="button" onclick="oneStar()">1</li>
+            <li id="button-2" role="button" onclick="twoStar()">2</li>
+            <li id="button-3" role="button" onclick="threeStar()">3</li>
+            <li id="button-4" role="button" onclick="fourStar()">4</li>
+            <li id="button-5" role="button" onclick="fiveStar()">5</li>
+          </ul>
+          <div class="submit-button" role="button" onclick="submitRating()">
+            <span>Submit</span>
+          </div>
         </div>
-      </div>
-      <!-- Rating state end -->
+        <!-- Rating state end -->
 
-      <!-- Thank you state start -->
-      <div class="thank-you-card" id="thank-you-card">
-        <img src="./images/illustration-thank-you.svg" alt="Thank you Image">
+        <!-- Thank you state start -->
+        <div class="thank-you-card" id="thank-you-card">
+          <img src="./images/illustration-thank-you.svg" alt="Thank you Image">
 
-        <div class="rating">You selected <span id="user-stars"></span>out of 5</div>
+          <div class="rating"><span>You selected <span id="user-stars"></span>out of 5</span></div>
 
-        <h2> Thank you!</h2>
+          <h2> Thank you!</h2>
 
-        <p>We appreciate you taking the time to give a rating. If you ever need more support,
-          don’t hesitate to get in touch!</p>
+          <p>We appreciate you taking the time to give a rating. If you ever need more support,
+            don’t hesitate to get in touch!</p>
 
-      </div>
-      <!-- Thank you state end -->
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          aria-label="check out the challenge">Frontend Mentor</a>.
-        Coded by <a href="https://www.frontendmentor.io/profile/AndyAshley" target="_blank"
-          aria-label="check out my profile">Andy</a>.
+        </div>
+        <!-- Thank you state end -->
+
       </div>
     </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        aria-label="check out the challenge">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/AndyAshley" target="_blank"
+        aria-label="check out my profile">Andy</a>.
   </main>
   <script src="./js/app.js"></script>
 </body>
