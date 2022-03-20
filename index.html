@@ -25,10 +25,10 @@
     <main>
       <form>
         <div class="form-inputs">
-          <input type="text" id="email" name="email" class="text-input" placeholder="Your email address...">
-          <div class="error-text">Please provide a valid email address</div>
+          <input type="text" id="email" name="email" placeholder="Your email address..." oninput="getEmail()">
+          <div class="error-text" id="error-text">Please provide a valid email address</div>
         </div>
-        <div class="notify-button" role="button">Notify Me</div>
+        <div class="notify-button" role="button" onclick="validateForm()">Notify Me</div>
 
       </form>
       <div class="main-image">

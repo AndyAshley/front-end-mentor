@@ -27,12 +27,9 @@ body {
   font-size: 20px;
 }
 
-.text-input.active {
+#email.active {
   border: 1px solid $light-red;
   opacity: 1;
-  &::placeholder {
-    color: $light-red;
-  }
 }
 
 .main-container {
@@ -43,6 +40,7 @@ body {
   height: 100%;
   padding: 2rem 0rem 0rem 0rem;
   @media (min-width: 1024px) {
+    justify-content: center;
     height: 100vh;
   }
   header {

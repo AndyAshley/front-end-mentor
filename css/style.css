@@ -18,18 +18,9 @@ body {
   font-size: 20px;
 }
 
-.text-input.active {
+#email.active {
   border: 1px solid #ff5263;
   opacity: 1;
-}
-.text-input.active::-moz-placeholder {
-  color: #ff5263;
-}
-.text-input.active:-ms-input-placeholder {
-  color: #ff5263;
-}
-.text-input.active::placeholder {
-  color: #ff5263;
 }
 
 .main-container {
@@ -42,6 +33,7 @@ body {
 }
 @media (min-width: 1024px) {
   .main-container {
+    justify-content: center;
     height: 100vh;
   }
 }
