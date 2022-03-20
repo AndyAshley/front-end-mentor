@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
 *,
 ::before,
@@ -8,12 +9,12 @@
 }
 
 body {
-  min-height: 100vh;
-  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
   font-family: "Libre Franklin", sans-serif;
   font-size: 20px;
 }
@@ -24,6 +25,7 @@ body {
 }
 
 .main-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,12 +48,12 @@ body {
   margin-bottom: 1.5rem;
 }
 .main-container header h1 {
-  font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 .main-container header h1 span {
-  color: #969696;
   font-weight: 300;
+  color: #969696;
 }
 @media (min-width: 768px) {
   .main-container header h1 {
@@ -75,12 +77,12 @@ body {
   }
 }
 .main-container form {
-  width: 100%;
   padding: 0rem 2rem;
+  width: 100%;
 }
 @media (min-width: 650px) {
   .main-container form {
-    padding: 0rem 100px;
+    padding: 0rem 6.5rem;
   }
 }
 @media (min-width: 1024px) {
@@ -96,12 +98,12 @@ body {
 }
 .main-container form .form-inputs input {
   height: 40px;
-  padding-left: 1.5rem;
-  border-radius: 2rem;
   width: 100%;
   margin-top: 2rem;
-  outline: none;
+  padding-left: 1.5rem;
   border: 1px solid rgba(150, 150, 150, 0.8);
+  border-radius: 2rem;
+  outline: none;
   opacity: 0.6;
 }
 .main-container form .form-inputs input::-moz-placeholder {
@@ -115,38 +117,40 @@ body {
 }
 @media (min-width: 1024px) {
   .main-container form .form-inputs input {
-    margin-top: 0rem;
-    padding-left: 2rem;
     width: 95%;
     height: 59px;
+    margin-top: 0rem;
+    padding-left: 2rem;
     font-size: 18px;
   }
 }
 .main-container form .form-inputs .error-text {
   display: none;
+  margin-top: 0.5rem;
   text-align: center;
   font-size: 12px;
   font-style: italic;
+  font-weight: 300;
   color: #ff5263;
-  margin-top: 0.5rem;
 }
 @media (min-width: 1024px) {
   .main-container form .form-inputs .error-text {
-    text-align: left;
     margin-left: 1.5rem;
+    text-align: left;
+    font-weight: 600;
   }
 }
 .main-container form .notify-button {
   height: 40px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 600;
-  margin-top: 0.7rem;
-  padding: 0.8rem;
-  border-radius: 2rem;
   width: 100%;
   background: #4f7df3;
   color: white;
+  margin-top: 0.7rem;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 2rem;
   cursor: pointer;
   box-shadow: 0px 5px 10px #c2d3ff;
 }
@@ -155,10 +159,10 @@ body {
 }
 @media (min-width: 1024px) {
   .main-container form .notify-button {
-    margin-top: 0rem;
-    padding: 1.2rem;
     width: 300px;
     height: 60px;
+    margin-top: 0rem;
+    padding: 1.2rem;
     font-size: 18px;
   }
 }
@@ -167,10 +171,10 @@ body {
   justify-content: center;
 }
 .main-container .main-image img {
-  margin-top: 5rem;
-  margin-bottom: 6rem;
   width: 100%;
   height: auto;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
   padding: 0rem 0.5rem;
 }
 @media (min-width: 768px) {
@@ -193,8 +197,8 @@ body {
   height: 37px;
   width: 37px;
   margin: 0.5rem;
-  border: 2px solid rgba(150, 150, 150, 0.2);
   padding: 1rem;
+  border: 2px solid rgba(150, 150, 150, 0.2);
   border-radius: 25px;
   cursor: pointer;
 }
@@ -208,8 +212,8 @@ body {
   position: absolute;
   top: 9px;
   left: 10px;
-  color: #4f7df3;
   font-size: 16px;
+  color: #4f7df3;
 }
 .main-container .social-section .social-container .social-icon .fa-facebook-f {
   left: 12px;
@@ -227,4 +231,87 @@ body {
 }
 .main-container .attribution a {
   color: #4f7df3;
+}
+
+.toast {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 25px;
+  right: 0;
+  height: 75px;
+  width: 250px;
+  background: limegreen;
+  color: white;
+  border-radius: 0.5rem;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  animation: slide-in normal 400ms ease forwards, slide-in reverse 300ms 4.7s ease;
+}
+.toast p {
+  margin: 0rem;
+  padding: 0rem;
+  font-weight: 700;
+}
+.toast::after {
+  position: absolute;
+  content: "×";
+  top: 5px;
+  right: 10px;
+}
+.toast::before {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  width: 100%;
+  height: 10px;
+  background: white;
+  opacity: 0.4;
+  -webkit-animation: progress-bar 5s linear forwards;
+          animation: progress-bar 5s linear forwards;
+}
+@media (max-width: 475px) {
+  .toast {
+    top: 650px;
+    right: 0;
+  }
+}
+@-webkit-keyframes progress-bar {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-250px);
+  }
+}
+@keyframes progress-bar {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-250px);
+  }
+}
+@-webkit-keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }/*# sourceMappingURL=style.css.map */
