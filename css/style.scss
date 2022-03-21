@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: $violet;
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  //   @media (min-width: 376px) {
+  //     background-image: url(../images/bg-desktop.svg);
+  //   }
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem;
+  img {
+    width: 140px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  .main-image {
+    margin: 1.8rem 0rem;
+    img {
+      width: 100%;
+      height: auto;
+      padding: 0rem 2.5rem;
+    }
+  }
+  .main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0rem 2.2rem;
+    color: white;
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.6rem;
+      font-size: 16px;
+    }
+    .register-button {
+      width: 225px;
+      margin-top: 1.5rem;
+      padding: 0.7rem;
+      background: white;
+      color: $violet;
+      font-size: 13px;
+      border-radius: 2rem;
+      cursor: pointer;
+      box-shadow: 0px 5px 10px rgba($color: black, $alpha: 0.2);
+      transition: all 200ms linear;
+      &:hover {
+        background: $soft-magenta;
+        color: white;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  .social-wrapper {
+    display: flex;
+
+    .social-icon {
+      position: relative;
+      height: 30px;
+      width: 30px;
+      margin: 0.3rem;
+      border: 1px solid white;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      transition: all 200ms linear;
+      &:hover,
+      &:hover i {
+        border-color: $soft-magenta;
+        color: $soft-magenta;
+      }
+      i {
+        position: absolute;
+        font-size: 14px;
+        top: 7.5px;
+        left: 7.5px;
+        transition: all 200ms linear;
+      }
+      //adjust for faceooks offset
+      .fa-facebook-f {
+        left: 10px;
+      }
+    }
+  }
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  a {
+    color: $soft-magenta;
+  }
+}

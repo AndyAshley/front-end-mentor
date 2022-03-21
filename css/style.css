@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: #674baf;
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+header img {
+  width: 140px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .main-image {
+  margin: 1.8rem 0rem;
+}
+main .main-image img {
+  width: 100%;
+  height: auto;
+  padding: 0rem 2.5rem;
+}
+main .main-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0rem 2.2rem;
+  color: white;
+}
+main .main-text h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+main .main-text p {
+  line-height: 1.6rem;
+  font-size: 16px;
+}
+main .main-text .register-button {
+  width: 225px;
+  margin-top: 1.5rem;
+  padding: 0.7rem;
+  background: white;
+  color: #674baf;
+  font-size: 13px;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 200ms linear;
+}
+main .main-text .register-button:hover {
+  background: #e882e8;
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+footer .social-wrapper {
+  display: flex;
+}
+footer .social-wrapper .social-icon {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin: 0.3rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+footer .social-wrapper .social-icon:hover, footer .social-wrapper .social-icon:hover i {
+  border-color: #e882e8;
+  color: #e882e8;
+}
+footer .social-wrapper .social-icon i {
+  position: absolute;
+  font-size: 14px;
+  top: 7.5px;
+  left: 7.5px;
+  transition: all 200ms linear;
+}
+footer .social-wrapper .social-icon .fa-facebook-f {
+  left: 10px;
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+}
+.attribution a {
+  color: #e882e8;
+}/*# sourceMappingURL=style.css.map */
