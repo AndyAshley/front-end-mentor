@@ -35,15 +35,18 @@ function validateForm() {
   }
 }
 
-//set up the toast and insert it into the DOM on successful submit
-
-function createToast(text) {
-  //what we want our toast to say, ex. "Success!"
+// set up the toast and insert it into the DOM on successful submit
+// arguments text and background. default background is limegreen.
+function createToast(text, background) {
+  //what we want our toast to say, ex. "Success!", and CSS background color like "red"
   const message = text;
+  const bgColor = background;
 
   // create the element and add the toast class
   const toast = document.createElement("div");
   toast.className = "toast";
+  toast.style.backgroundColor = bgColor;
+
   const toastText = document.createElement("p");
   toastText.innerHTML = message;
   toast.appendChild(toastText);

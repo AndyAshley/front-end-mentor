@@ -92,6 +92,7 @@ body {
         width: 100%;
         margin-top: 2rem;
         padding-left: 1.5rem;
+        font-size: 16px;
         border: 1px solid hsla(0, 0%, 59%, 0.8);
         border-radius: 2rem;
         outline: none;
@@ -226,7 +227,7 @@ body {
   right: 0;
   height: 75px;
   width: 250px;
-  background: limegreen;
+  background-color: limegreen;
   color: white;
   border-radius: 0.5rem;
   z-index: 1;
@@ -257,7 +258,7 @@ body {
   }
 
   @media (max-width: 475px) {
-    top: 80vh;
+    top: 75vh;
     right: 0;
   }
   @keyframes progress-bar {
