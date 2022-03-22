@@ -14,12 +14,12 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Manrope", sans-serif;
-  font-size: 28px;
+  font-size: 16px;
   background: #1f2632;
 }
-@media (min-width: 1024px) {
+@media (min-width: 600px) {
   body {
-    justify-content: space-evenly;
+    justify-content: center;
   }
 }
 
@@ -35,7 +35,7 @@ main {
   justify-content: space-around;
   min-height: 325px;
   width: 340px;
-  margin: 8rem 1rem;
+  margin-top: 8rem;
   padding: 2rem 1.5rem;
   color: #cee3e9;
   background: #323a49;
@@ -45,13 +45,9 @@ main {
 }
 @media (min-width: 600px) {
   .advice-card {
-    min-height: 400px;
-    width: 550px;
-  }
-}
-@media (min-width: 1024px) {
-  .advice-card {
-    margin: 0rem;
+    margin-top: -1rem;
+    min-height: 330px;
+    width: 540px;
   }
 }
 .advice-card h1 {
@@ -63,6 +59,12 @@ main {
 }
 .advice-card q {
   text-align: center;
+  font-size: 24px;
+}
+@media (min-width: 600px) {
+  .advice-card q {
+    font-size: 28px;
+  }
 }
 .advice-card .divider {
   display: block;
@@ -93,7 +95,7 @@ main {
 }
 @media (min-width: 600px) {
   .advice-card .advice-button {
-    left: 242.2px;
+    left: 236px;
   }
 }
 .advice-card .advice-button:hover {
@@ -111,6 +113,8 @@ main {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
   margin-bottom: 2rem;
 }
 footer .attribution {
