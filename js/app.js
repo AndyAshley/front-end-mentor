@@ -13,4 +13,4 @@ async function getAdvice() {
   console.log(adviceId, advice);
 }
 
-getAdvice();
+window.onload(getAdvice());
