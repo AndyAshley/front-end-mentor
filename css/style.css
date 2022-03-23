@@ -90,17 +90,21 @@ main {
   width: 65px;
   border-radius: 50%;
   background: #52ffa8;
-  z-index: 2;
+  z-index: 9999;
   cursor: pointer;
+  transition: all 0.2s linear;
 }
 @media (min-width: 600px) {
   .advice-card .advice-button {
     left: 236px;
   }
 }
-.advice-card .advice-button:hover {
-  background: #75ffba;
-  box-shadow: 0px 0px 25px #52ffa8;
+@media (min-width: 600px) {
+  .advice-card .advice-button:hover {
+    background: #75ffba;
+    box-shadow: 0px 0px 25px #52ffa8;
+    transform: scale(1.05);
+  }
 }
 .advice-card .advice-button::before {
   position: absolute;

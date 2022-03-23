@@ -1,16 +1,17 @@
-const IDBOX = document.querySelector(".id-box");
-const ADVICEBOX = document.querySelector(".advice-box");
+const idBox = document.querySelector(".id-box");
+const adviceBox = document.querySelector(".advice-box");
+const adviceBtn = document.querySelector(".advice-button");
 
 async function getAdvice() {
-  const response = await fetch("https://api.adviceslip.com/advice");
-  const data = await response.json();
-  const advice = data.slip.advice;
-  const adviceId = data.slip.id;
+  let response = await fetch("https://api.adviceslip.com/advice");
+  let data = await response.json();
+  let adviceId = data.slip.id;
+  let advice = data.slip.advice;
 
-  IDBOX.innerHTML = adviceId;
-  ADVICEBOX.innerHTML = advice;
-
-  console.log(adviceId, advice);
+  idBox.innerHTML = adviceId;
+  adviceBox.innerHTML = advice;
 }
 
-window.onload(getAdvice());
+adviceBtn.addEventListener("click", () => getAdvice());
+
+document.onload = getAdvice();
