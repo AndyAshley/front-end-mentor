@@ -3,7 +3,7 @@ const adviceBox = document.querySelector(".advice-box");
 const adviceBtn = document.querySelector(".advice-button");
 
 async function getAdvice() {
-  let response = await fetch("https://api.adviceslip.com/advice");
+  let response = await fetch("https://api.adviceslip.com/advice", { cache: "no-cache" });
   let data = await response.json();
   let adviceId = data.slip.id;
   let advice = data.slip.advice;
