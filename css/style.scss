@@ -1,0 +1,306 @@
+$Blue: hsl(246, 80%, 60%);
+$Light-red-work: hsl(15, 100%, 70%);
+$Soft-blue-play: hsl(195, 74%, 62%);
+$Light-red-study: hsl(348, 100%, 68%);
+$Lime-green-exercise: hsl(145, 58%, 55%);
+$Violet-social: hsl(264, 64%, 52%);
+$Soft-orange-care: hsl(43, 84%, 65%);
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  background: $Very-dark-blue;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 5rem 0rem;
+  @media (min-width: 1024px) {
+    padding: 0rem 4rem;
+  }
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: $Pale-Blue;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &:hover {
+    color: white !important;
+  }
+}
+
+.main-grid {
+  color: white;
+  display: grid;
+  width: 90%;
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.profile-wrapper {
+  background: $Dark-blue;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  @media (min-width: 600px) {
+    grid-column: span 2;
+    margin: 0.5rem;
+  }
+  @media (min-width: 1024px) {
+    margin: 0.8rem;
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .profile-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    background: $Blue;
+    border-radius: 1rem;
+    @media (min-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 70%;
+    }
+
+    .profile-avatar img {
+      width: 75px;
+      height: auto;
+      border: 3px solid white;
+      border-radius: 50%;
+      margin-right: 2rem;
+      @media (min-width: 1024px) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    span {
+      color: $Pale-Blue;
+      font-size: 15px;
+    }
+    h1 {
+      font-size: 25px;
+      font-weight: 300;
+      @media (min-width: 1024px) {
+        font-size: 45px;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .categories {
+    display: flex;
+    padding: 1.5rem 0rem;
+    @media (min-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      height: 30%;
+      margin-left: 1rem;
+    }
+    button {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.2rem;
+      @media (min-width: 1024px) {
+        margin-right: 0;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.stat-card {
+  margin-top: 1.5rem;
+  padding-top: 2.5rem;
+  border-radius: 1rem;
+
+  @media (min-width: 600px) {
+    margin: 0.5rem;
+  }
+  @media (min-width: 1024px) {
+    margin: 0.8rem;
+  }
+  .stats-wrapper {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: $Dark-blue;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    &:hover {
+      background: $Desaturated-blue;
+    }
+    @media (min-width: 1024px) {
+      padding: 1rem;
+    }
+    .stats-header {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5rem 0rem;
+      font-size: 20px;
+      .fa-ellipsis {
+        color: $Pale-Blue;
+        font-size: 25px;
+      }
+    }
+
+    .stats-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .current {
+        font-size: 32px;
+        font-weight: 300;
+      }
+      .previous {
+        font-size: 15px;
+        color: $Pale-Blue;
+      }
+      @media (min-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+        .current {
+          margin-bottom: 1rem;
+        }
+      }
+      @media (min-width: 800px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .current {
+          margin-bottom: 0rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        margin-top: 0rem;
+        padding-top: 2rem;
+        flex-direction: column;
+        align-items: flex-start !important;
+        margin: 1rem;
+        .current {
+          font-size: 40px !important;
+          margin-bottom: 0.5rem;
+        }
+        .previous {
+          font-size: 12px;
+        }
+      }
+      @media (min-width: 1440px) {
+        .current {
+          font-size: 50px !important;
+          margin-bottom: 0.5rem;
+        }
+        .previous {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.--work {
+  background: $Light-red-work;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  background-image: url(/images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: 92% -10%;
+  background-attachment: local;
+}
+
+.--play {
+  background: $Soft-blue-play;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  background-image: url(/images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: 92% -6%;
+  background-attachment: local;
+}
+
+.--study {
+  background: $Light-red-study;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  background-image: url(/images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: 92% -6%;
+  background-attachment: local;
+}
+
+.--exercise {
+  background: $Lime-green-exercise;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  background-image: url(/images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: 92% top;
+  background-attachment: local;
+}
+.--social {
+  background: $Violet-social;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  background-image: url(/images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: 92% -10%;
+  background-attachment: local;
+}
+.--care {
+  background: $Soft-orange-care;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  background-image: url(/images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: 92% -6%;
+  background-attachment: local;
+}
+
+.attribution {
+  position: bottom;
+  margin-top: 3rem;
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: $Lime-green-exercise;
+  }
+}
