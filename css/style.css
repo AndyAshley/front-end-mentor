@@ -30,7 +30,7 @@ main {
 }
 @media (min-width: 1024px) {
   main {
-    padding: 0rem 4rem;
+    padding: 0rem 10%;
   }
 }
 
