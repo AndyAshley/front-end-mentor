@@ -168,7 +168,6 @@ function monthly() {
   dailyBtn.style.color = "#bdc1ff";
   weeklyBtn.style.color = "#bdc1ff";
   monthlyBtn.style.color = "white";
-
   workCur.innerHTML = workData.monthly.current + "hrs";
   workPrev.innerHTML = "Last Month - " + workData.monthly.previous + "hrs";
   playCur.innerHTML = playData.monthly.current + "hrs";
@@ -183,4 +182,4 @@ function monthly() {
   carePrev.innerHTML = "Last Month - " + careData.monthly.previous + "hrs";
 }
 
-document.onload(weekly());
+window.onload = weekly();
