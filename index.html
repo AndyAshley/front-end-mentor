@@ -1,44 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
+
 <body>
+  <main>
+    <h1>SPLI<br />TTER</h1>
+    <div class="grid-main">
+      <div class="grid-input">
+        <div class="bill-input-container">
+          <label for="bill-total"><strong>Bill</strong></label>
+          <input type="number" name="bill-total" id="bill-total" placeholder="0" oninput="getBill()">
+        </div>
+        <div class="tip-btn-container">
+          <strong>Select Tip %</strong> <br />
+          <div class="btn-wrapper">
+            <button id="tip-5" onclick="setTip(5)">5%</button>
+            <button id="tip-10" onclick="setTip(10)">10%</button>
+            <button id="tip-15" onclick="setTip(15)">15%</button>
+            <button id="tip-25" onclick="setTip(25)">25%</button>
+            <button id="tip-50" onclick="setTip(50)">50%</button>
+            <input type="number" name="tip-custom" id="tip-custom" placeholder="Custom" oninput="setCustom()">
+          </div>
+        </div>
+        <div class="guest-input-container">
+          <label for="guest-total"><strong>Number of People</strong></label>
+          <input type="number" name="guest-total" id="guest-total" placeholder="1" oninput="setPeople()">
 
-  Bill
+        </div>
+      </div>
+      <div class="grid-display">
+        <div class="display-wrapper">
+          <div class="tip-amount">
+            <div class="amount-text">
+              <p> Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <div class="tip-display"><span id="tip-sum"></span></div>
+          </div>
+          <div class="total-amount">
+            <div class="total-text">
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <div class="total-display"><span id="total-sum"></span></div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+          </div>
+          <div class="reset" role="button" onclick="reset()">Reset</div>
 
-  Number of People
+        </div>
 
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
+      </div>
+    </div>
+  </main>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      aria-label="check out the challenge">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/AndyAshley" target="_blank"
+      aria-label="check out my profile">Andy</a>.
   </div>
+  <script src="./js/app.js"></script>
 </body>
+
 </html>
