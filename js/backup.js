@@ -10,7 +10,6 @@ const tipBtn15 = document.getElementById("tip-15");
 const tipBtn25 = document.getElementById("tip-25");
 const tipBtn50 = document.getElementById("tip-50");
 const btnArray = [tipBtn5, tipBtn10, tipBtn15, tipBtn25, tipBtn50];
-const errorText = document.getElementById("error");
 
 const defaultTipDisplay = "0.00";
 const defaultTotalDisplay = "0.00";
@@ -22,7 +21,7 @@ let customTip = "";
 let tipAmount;
 
 //initialize states on window load.
-people.value = guests;
+
 tipDisplay.innerText = defaultTipDisplay;
 totalDisplay.innerText = defaultTipDisplay;
 tipBtn5.classList.toggle("active");
@@ -60,12 +59,15 @@ tipBtn10.addEventListener("click", (e) => {
 tipBtn15.addEventListener("click", (e) => {
   custom.value = "";
   isCustom = false;
-  if (tipBtn15.classList.contains("active")) return;
-  tipBtn5.classList.remove("active");
-  tipBtn10.classList.remove("active");
-  tipBtn15.classList.toggle("active");
-  tipBtn25.classList.remove("active");
-  tipBtn50.classList.remove("active");
+  if (tipBtn15.classList.contains("active")) {
+    return;
+  } else {
+    tipBtn5.classList.remove("active");
+    tipBtn10.classList.remove("active");
+    tipBtn15.classList.toggle("active");
+    tipBtn25.classList.remove("active");
+    tipBtn50.classList.remove("active");
+  }
 });
 
 tipBtn25.addEventListener("click", (e) => {
@@ -114,9 +116,9 @@ function showSum() {
   x = (billAmount * tipAmount) / 100;
   i = guests;
   splitTip = x / i;
+
   tipDisplay.innerText = x.toFixed(2);
   totalDisplay.innerText = splitTip.toFixed(2);
-  return;
 }
 
 function getBill() {
@@ -131,27 +133,24 @@ function getBill() {
 
     //set display and amount
     bill.value = billAmount;
-
+    billAmount = bill.value;
     showSum();
-    return;
   }
 }
 
 function setCustom() {
   //get the vlaue
   customTip = custom.value;
-  btnArray.forEach((btn) => btn.classList.remove("active"));
+
+  //if value has input, custom tip is true, else its false
   if (customTip !== "") {
     isCustom = true;
     custom.value = customTip;
+    customTip = custom.value;
     tipAmount = customTip;
-
     showSum();
   } else {
     isCustom = false;
-    tipBtn5.classList.toggle("active");
-    setTip(5);
-    showSum();
   }
 }
 
@@ -167,18 +166,8 @@ function setTip(number) {
 
 function setPeople() {
   //set up input var
-  if (people.value === "0") {
-    errorText.classList.toggle("active");
-    people.classList.add("input-active");
-    return;
-  }
-  if (people.value !== "0" && errorText.classList.contains("active") && people.classList.contains("input-active")) {
-    errorText.classList.remove("active");
-    people.classList.remove("input-active");
-  }
   guests = people.value;
   showSum();
-  return;
 }
 
 function reset() {
@@ -189,7 +178,10 @@ function reset() {
   guests = 1;
   customTip = "";
   isCustom = false;
-  btnArray.forEach((btn) => btn.classList.remove("active"));
   setTip(5);
   tipBtn5.classList.add("active");
+  tipBtn10.classList.remove("active");
+  tipBtn15.classList.remove("active");
+  tipBtn25.classList.remove("active");
+  tipBtn50.classList.remove("active");
 }

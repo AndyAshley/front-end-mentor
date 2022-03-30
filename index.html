@@ -35,7 +35,10 @@
           </div>
         </div>
         <div class="guest-input-container">
-          <label for="guest-total"><strong>Number of People</strong></label>
+          <label for="guest-total"><strong>Number of People</strong>
+
+          </label>
+          <p id="error">Can't be zero</p>
           <input type="number" name="guest-total" id="guest-total" placeholder="1" oninput="setPeople()">
 
         </div>
@@ -47,14 +50,14 @@
               <p> Tip Amount</p>
               <p>/ person</p>
             </div>
-            <div class="tip-display"><span id="tip-sum"></span></div>
+            <div class="tip-display">$<span id="tip-sum"></span></div>
           </div>
           <div class="total-amount">
             <div class="total-text">
               <p>Total</p>
               <p>/ person</p>
             </div>
-            <div class="total-display"><span id="total-sum"></span></div>
+            <div class="total-display">$<span id="total-sum"></span></div>
 
           </div>
           <div class="reset" role="button" onclick="reset()">Reset</div>
@@ -62,14 +65,16 @@
         </div>
 
       </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          aria-label="check out the challenge">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/AndyAshley" target="_blank"
+          aria-label="check out my profile">Andy</a>.
+      </div>
     </div>
+
   </main>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-      aria-label="check out the challenge">Frontend Mentor</a>.
-    Coded by <a href="https://www.frontendmentor.io/profile/AndyAshley" target="_blank"
-      aria-label="check out my profile">Andy</a>.
-  </div>
+
   <script src="./js/app.js"></script>
 </body>
 

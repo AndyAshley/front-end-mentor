@@ -32,6 +32,10 @@ main {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  @media (min-width: 600px) {
+    align-items: center;
+    justify-content: center;
+  }
   h1 {
     font-size: 26px;
     letter-spacing: 8px;
@@ -48,6 +52,14 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input[type="text"] {
+  color: $Very-dark-cyan;
+}
+label {
+  font-size: 16px;
+  color: $Dark-grayish-cyan;
+}
+
 .grid-main {
   display: grid;
   justify-content: center;
@@ -57,46 +69,100 @@ input::-webkit-inner-spin-button {
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   width: 100%;
+  @media (min-width: 600px) {
+    width: 600px;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    width: 800px;
+    height: 400px;
+    column-gap: 2.5rem;
+  }
 }
+
+.grid-input,
+.grid-display {
+  @media (min-width: 1024px) {
+    height: 100%;
+  }
+}
+
+.grid-input {
+  .bill-input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 1024px) {
+    height: 100%;
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.guest-input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .tip-btn-container {
   strong {
     font-size: 16px;
     color: $Dark-grayish-cyan;
   }
-}
-.btn-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  button {
-    background-color: $Very-dark-cyan;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 22px;
-    letter-spacing: 2px;
-    font-family: "Space Mono", monospace;
-    color: $White;
-    padding: 0.5rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      background-color: $Light-grayish-cyan;
+  .btn-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    button {
+      background-color: $Very-dark-cyan;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 22px;
+      letter-spacing: 2px;
+      font-family: "Space Mono", monospace;
+      color: $White;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background-color: $Light-grayish-cyan;
+        color: $Very-dark-cyan;
+      }
+      &:nth-child(odd) {
+        margin: 0.5rem 0.5rem 0.5rem 0rem;
+      }
+      &:nth-child(even) {
+        margin: 0.5rem 0rem 0.5rem 0.5rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 20px;
+        &:nth-child(odd) {
+          margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+        }
+        &:nth-child(even) {
+          margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+        }
+      }
+    }
+    #tip-5.active,
+    #tip-10.active,
+    #tip-15.active,
+    #tip-25.active,
+    #tip-50.active {
+      background-color: $Strong-cyan;
       color: $Very-dark-cyan;
     }
-    &:nth-child(odd) {
-      margin: 0.5rem 0.5rem 0.5rem 0rem;
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
     }
-    &:nth-child(even) {
-      margin: 0.5rem 0rem 0.5rem 0.5rem;
-    }
-  }
-  #tip-5.active,
-  #tip-10.active,
-  #tip-15.active,
-  #tip-25.active,
-  #tip-50.active {
-    background-color: $Strong-cyan;
-    color: $Very-dark-cyan;
   }
 }
 
@@ -111,7 +177,14 @@ input::-webkit-inner-spin-button {
   padding-inline: 1rem;
   border-radius: 8px;
   height: 3rem;
-  outline: none;
+  outline: transparent;
+  transition: all 0.2s linear;
+  &:hover {
+    outline: 2px solid $Strong-cyan;
+  }
+  @media (min-width: 1024px) {
+    width: 100%;
+  }
 }
 
 #tip-custom {
@@ -125,13 +198,41 @@ input::-webkit-inner-spin-button {
   margin: 0.5rem;
   padding-inline: 1rem;
   border-radius: 8px;
-  outline: none;
+  outline: transparent;
+  transition: all 0.2s linear;
+  &:hover {
+    outline: 2px solid $Strong-cyan;
+  }
+  @media (min-width: 1024px) {
+    display: block;
+    margin: 0.2rem !important;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0rem;
+    font-size: 18px;
+  }
 }
 
 #tip-sum,
 #total-sum {
   font-size: 30px;
   color: $Strong-cyan;
+  @media (min-width: 1024px) {
+    font-size: 44px;
+  }
+}
+
+.tip-display,
+.total-display {
+  font-size: 30px;
+  color: $Strong-cyan;
+  @media (min-width: 1024px) {
+    color: $Strong-cyan;
+    font-size: 44px;
+  }
 }
 
 .display-wrapper {
@@ -139,6 +240,17 @@ input::-webkit-inner-spin-button {
   border-radius: 1rem;
   padding: 1.5rem;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  @media (min-width: 1024px) {
+    height: 100%;
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .tip-amount,
   .total-amount {
     display: flex;
@@ -152,6 +264,7 @@ input::-webkit-inner-spin-button {
   .total-text p {
     font-size: 14px;
     color: $Very-light-grayish-cyan;
+
     &:nth-child(2) {
       font-size: 12px;
       color: $Grayish-cyan;
@@ -175,17 +288,31 @@ input::-webkit-inner-spin-button {
   }
 }
 
-input[type="text"] {
-  color: $Very-dark-cyan;
+.input-active {
+  outline: 2px solid coral !important;
 }
-label {
-  font-size: 16px;
-  color: $Dark-grayish-cyan;
+
+#error {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: coral;
+  font-size: 14px;
+}
+
+#error.active {
+  display: block;
 }
 .attribution {
   font-size: 11px;
   text-align: center;
+  @media (min-width: 1024px) {
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+    grid-column: span 2;
+  }
   a {
-    color: hsl(228, 45%, 44%);
+    color: $Strong-cyan;
   }
 }
