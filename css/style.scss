@@ -82,8 +82,8 @@ label {
     margin-top: 3rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    width: 800px;
-    height: 400px;
+    width: 900px;
+    height: 500px;
     column-gap: 2.5rem;
   }
 }
@@ -312,8 +312,8 @@ label {
   font-size: 11px;
   text-align: center;
   @media (min-width: 1024px) {
-    margin-top: 1rem;
-    margin-bottom: -2rem;
+    margin-top: 3rem;
+    margin-bottom: -5rem;
     grid-column: span 2;
   }
   a {

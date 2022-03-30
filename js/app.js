@@ -17,6 +17,7 @@ const defaultTotalDisplay = "0.00";
 
 let isCustom = false;
 let billAmount = 0.0;
+let billTotal;
 let guests = 1;
 let customTip = "";
 let tipAmount;
@@ -114,8 +115,13 @@ function showSum() {
   x = (billAmount * tipAmount) / 100;
   i = guests;
   splitTip = x / i;
-  tipDisplay.innerText = x.toFixed(2);
-  totalDisplay.innerText = splitTip.toFixed(2);
+  billTotal = billAmount / i + splitTip;
+
+  //tip amount per person
+  tipDisplay.innerText = splitTip.toFixed(2);
+
+  //total bill per person
+  totalDisplay.innerText = billTotal.toFixed(2);
   return;
 }
 
