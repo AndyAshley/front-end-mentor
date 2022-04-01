@@ -1,0 +1,12 @@
+.Background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
+@media (min-width: 1440px) {
+  .Background {
+    min-height: 600px;
+  }
+}

@@ -1,0 +1,21 @@
+.LearnSpan {
+  height: 10px;
+  left: -8px;
+  top: 14px;
+}
+
+@media (min-width: 768px) {
+  .LearnSpan {
+    height: 15px;
+    left: -10px;
+    top: 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .LearnSpan {
+    height: 15px;
+    left: -10px;
+    top: 11px;
+  }
+}
