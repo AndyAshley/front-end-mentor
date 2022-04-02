@@ -1,4 +1,4 @@
-import styles from "../components/css/MainNavbar.module.css";
+import styles from "../components/css/TopNav.module.css";
 import { Navbar, NavbarBrand, Nav, Button } from "react-bootstrap";
 import classNames from "classnames";
 
@@ -17,7 +17,7 @@ export default function TopNav() {
           <Nav.Link href="#">Services</Nav.Link>
           <Nav.Link href="#">Projects</Nav.Link>
           <Button variant="light" className="btn btn-lg">
-            Contact
+            CONTACT
           </Button>
         </Nav>
       </Navbar.Collapse>

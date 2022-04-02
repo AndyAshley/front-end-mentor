@@ -31,12 +31,14 @@
 .NavContainer button:nth-child(4) {
   background-color: var(--Yellow);
   font-family: "Fraunces", serif;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 2rem;
+  border: none;
   padding-inline: 1.8rem;
   padding-block: 1rem;
   margin-bottom: 0.7rem;
   margin-top: 0.7rem;
+  transition: all 0.2s ease-in-out;
 }
 
 @media (min-width: 550px) {
@@ -52,11 +54,28 @@
 @media (min-width: 768px) {
   .NavContainer a {
     color: var(--White) !important;
+    margin-bottom: 0rem;
+    margin-inline: 1rem;
+    font-size: 18px;
   }
   .NavLinks {
     background-color: transparent;
+    display: flex;
+    align-items: center;
   }
   .NavLinks::before {
     display: none;
+  }
+  .NavContainer button:nth-child(4) {
+    background-color: var(--White);
+    margin-inline: 1rem;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    padding-inline: 1.5rem;
+    padding-block: 0.8rem;
+  }
+  .NavContainer button:nth-child(4):hover {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    color: var(--White);
   }
 }

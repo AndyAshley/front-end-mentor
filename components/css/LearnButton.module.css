@@ -2,6 +2,12 @@
   height: 10px;
   left: -8px;
   top: 13px;
+  opacity: 0.3;
+  transition: all 0.2s ease-in-out;
+}
+
+.ButtonContainer:hover .LearnSpan {
+  opacity: 1;
 }
 
 @media (min-width: 768px) {

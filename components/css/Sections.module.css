@@ -89,6 +89,11 @@
   .GraphicDesignGrid {
     background-image: url(/Desktop/image-graphic-design.jpg);
   }
+  /* .text:nth-child(1),
+  .text:nth-child(1) {
+    align-items: flex-start;
+    text-align: left;
+  } */
 
   .PhotographyGrid {
     background-image: url(/Desktop/image-photography.jpg);
