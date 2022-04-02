@@ -26,14 +26,3 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-
-.section-header {
-  font-family: "Fraunces", serif;
-  font-size: 32px;
-  font-weight: 900;
-}
-
-.section-paragraph {
-  color: var(--Dark-grayish-blue);
-  font-size: 18px;
-}

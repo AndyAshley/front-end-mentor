@@ -2,8 +2,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 300px;
+  min-height: calc(300px + 20vw);
 }
+
+/* @media (min-width: 425px) {
+  .Background {
+    min-height: (100% + 300px);
+  }
+} */
 
 @media (min-width: 1440px) {
   .Background {

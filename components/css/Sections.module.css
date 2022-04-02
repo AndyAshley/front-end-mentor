@@ -1,0 +1,99 @@
+.grid {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1.2fr;
+  min-height: calc(600px + 10w);
+}
+
+.Reverse {
+  order: 1;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 2rem;
+  text-align: center;
+}
+
+.grid h2 {
+  font-family: "Fraunces", serif;
+  font-size: 36px;
+  font-weight: 900;
+}
+.grid p {
+  color: var(--Dark-grayish-blue);
+  font-size: 20px;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.GridWrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.GraphicDesignGrid,
+.PhotographyGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  color: var(--Dark-desaturated-cyan);
+}
+
+.GraphicDesignGrid {
+  background-image: url(/Mobile/image-graphic-design.jpg);
+}
+
+.PhotographyGrid {
+  background-image: url(/Mobile/image-photography.jpg);
+}
+
+.GraphicDesignGrid h2,
+.PhotographyGrid h2 {
+  font-family: "Fraunces", serif;
+  font-size: 28px;
+  font-weight: 900;
+  margin-top: 3rem;
+}
+.GraphicDesignGrid p,
+.PhotographyGrid p {
+  margin-top: 1rem;
+  font-size: 15px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .Reverse {
+    order: -1;
+  }
+  .GridWrapper {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .GraphicDesignGrid,
+  .PhotographyGrid {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-items: flex-end;
+  }
+  .GraphicDesignGrid {
+    background-image: url(/Desktop/image-graphic-design.jpg);
+  }
+
+  .PhotographyGrid {
+    background-image: url(/Desktop/image-photography.jpg);
+  }
+  .GraphicDesignGrid p,
+  .PhotographyGrid p {
+    margin-bottom: 4rem;
+  }
+}

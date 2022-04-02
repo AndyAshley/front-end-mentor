@@ -3,6 +3,7 @@ import Footer from "@components/Footer";
 import SiteHeader from "@components/SiteHeader";
 import TransformSection from "@components/TransformSection";
 import StandoutSection from "@components/StandoutSection";
+import BackgroundSection from "@components/BackgroundSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <TransformSection />
         <StandoutSection />
+        <BackgroundSection />
       </main>
       {/* <Footer /> */}
     </>
