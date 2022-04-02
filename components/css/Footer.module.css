@@ -1,0 +1,36 @@
+.Footer {
+  background-color: #90d4c5;
+}
+
+.FooterWrapper {
+  text-align: center;
+  display: flex;
+  max-width: 375px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 200px;
+}
+
+.FooterWrapper a {
+  text-decoration: none;
+  color: var(--Dark-moderate-cyan);
+  font-size: 18px;
+  transition: all 0.2s linear;
+}
+.FooterWrapper a:hover {
+  color: var(--White);
+}
+
+.Footer path {
+  fill: var(--Dark-moderate-cyan);
+}
+
+.Socials path {
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.Socials path:hover {
+  fill: var(--White);
+}

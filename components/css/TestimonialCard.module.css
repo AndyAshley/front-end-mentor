@@ -1,0 +1,31 @@
+.TestimonialCard img {
+  max-width: 75px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.TestimonialCard p {
+  color: var(--Dark-blue);
+  font-size: 18px;
+}
+
+.TestimonialCard strong {
+  font-size: 20px;
+  color: var(--Very-dark-desaturated-blue);
+  font-family: "Fraunces", serif;
+  letter-spacing: -1px;
+  margin-top: 1rem;
+}
+
+.TestimonialCard small {
+  color: var(--Grayish-blue);
+  margin-top: 0.5rem;
+}
+
+.TestimonialHeader {
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: var(--Grayish-blue);
+}

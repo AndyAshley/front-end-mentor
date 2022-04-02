@@ -1,3 +1,8 @@
+.GridWrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
 .grid {
   display: grid;
   justify-content: center;
@@ -30,11 +35,6 @@
   margin-bottom: 3rem;
 }
 
-.GridWrapper {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-
 .GraphicDesignGrid,
 .PhotographyGrid {
   display: grid;
@@ -43,15 +43,16 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 600px;
-  color: var(--Dark-desaturated-cyan);
 }
 
 .GraphicDesignGrid {
   background-image: url(/Mobile/image-graphic-design.jpg);
+  color: var(--Dark-desaturated-cyan);
 }
 
 .PhotographyGrid {
   background-image: url(/Mobile/image-photography.jpg);
+  color: var(--Dark-blue);
 }
 
 .GraphicDesignGrid h2,

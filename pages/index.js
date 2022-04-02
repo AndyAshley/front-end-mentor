@@ -4,13 +4,15 @@ import SiteHeader from "@components/SiteHeader";
 import TransformSection from "@components/TransformSection";
 import StandoutSection from "@components/StandoutSection";
 import BackgroundSection from "@components/BackgroundSection";
+import Testimonials from "@components/Testimonials";
+import Gallery from "@components/Gallery";
 
 export default function Home() {
   return (
-    <>
+    <div className="main-wrapper">
       <Head>
-        <title>Next.js Starter!</title>
-        {/* <link rel="icon" href="/favicon-32x32.png" /> */}
+        <title>Frontend Mentor | Sunnyside agency landing page</title>
+        <link rel="icon" href="/favicon-32x32.png" />
       </Head>
       <header>
         <SiteHeader />
@@ -19,8 +21,12 @@ export default function Home() {
         <TransformSection />
         <StandoutSection />
         <BackgroundSection />
+        <Testimonials />
+        <Gallery />
       </main>
-      {/* <Footer /> */}
-    </>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
 }

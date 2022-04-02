@@ -17,6 +17,10 @@ html,
 body {
   font-family: "Barlow", sans-serif;
   min-width: 100%;
+  display: flex;
+  justify-content: center;
+  /* background-color: #3ebfff; */
+  background-color: var(--Soft-red);
 }
 
 *,
@@ -25,4 +29,12 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.main-wrapper {
+  /* max-width: 1440px; */
+  /* border-left: 1px solid var(--Dark-moderate-cyan);
+  border-right: 1px solid var(--Dark-moderate-cyan); */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  background-color: var(--White);
 }
