@@ -1,16 +1,19 @@
 import { Container } from "react-bootstrap";
 import classNames from "classnames";
 import styles from "./css/Footer.module.css";
-import { sunnysideLogo, iconFacebook, iconInstagram, iconTwitter, iconPinterest } from "Constants/Constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookSquare, faTwitter, faPinterest, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import HoverScale from "./spring/HoverScale";
 
 export default function Footer() {
   return (
     <Container fluid className={classNames(styles.Footer, "px-0 py-5")}>
       <Container className={styles.FooterWrapper}>
-        <div className="text-center mb-5" id="logo">
-          {sunnysideLogo}
+        <div className="text-center mb-4 mt-2" id="logo">
+          {/* {sunnysideLogo} */}
+          <img src="/logo-dark.svg" alt="" fill="var(--Dark-blue)" style={{ width: "175px", opacity: "0.8" }} />
         </div>
-        <div className="d-flex justify-content-between w-100 px-4">
+        <div className="d-flex justify-content-between w-100 px-4 mt-3">
           <a href="#" target="_blank" rel="noopener noreferrer">
             About
           </a>
@@ -21,8 +24,11 @@ export default function Footer() {
             Projects
           </a>
         </div>
-        <div className={classNames(styles.Socials, "d-flex justify-content-around text-center w-75 px-5 mt-auto")}>
-          {iconFacebook} {iconInstagram} {iconTwitter} {iconPinterest}
+        <div className={classNames(styles.Socials, "d-flex justify-content-evenly text-center w-100 px-5 mt-auto")}>
+          <HoverScale scale={1.2} html={<FontAwesomeIcon icon={faFacebookSquare} />} />
+          <HoverScale scale={1.2} html={<FontAwesomeIcon icon={faInstagram} />} />
+          <HoverScale scale={1.2} html={<FontAwesomeIcon icon={faTwitter} />} />
+          <HoverScale scale={1.2} html={<FontAwesomeIcon icon={faPinterest} />} />
         </div>
       </Container>
     </Container>

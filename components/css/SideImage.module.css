@@ -16,3 +16,9 @@
     min-height: 600px;
   }
 }
+
+@media (min-width: 1600px) {
+  .Background {
+    min-height: 800px;
+  }
+}

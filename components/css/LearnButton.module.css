@@ -6,6 +6,11 @@
   transition: all 0.2s ease-in-out;
 }
 
+.ButtonContainer a {
+  text-decoration: none;
+  color: var(--Very-dark-desaturated-blue);
+}
+
 .ButtonContainer:hover .LearnSpan {
   opacity: 1;
 }
@@ -23,5 +28,11 @@
     height: 10px;
     left: -10px;
     top: 12px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .ButtonContainer a {
+    font-size: 24px;
   }
 }

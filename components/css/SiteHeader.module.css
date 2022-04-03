@@ -43,3 +43,23 @@
     font-weight: 900;
   }
 }
+
+@media (min-width: 1920px) {
+  .HeaderWrapper h1 {
+    font-size: 4.5rem;
+    margin-bottom: -2rem;
+  }
+  .HeaderWrapper {
+    background-position: 50% 95%;
+  }
+  .ArrowDown {
+    height: 125px;
+    width: auto;
+  }
+}
+
+@media (min-width: 2000px) {
+  .HeaderWrapper {
+    background-position: 50% 65%;
+  }
+}

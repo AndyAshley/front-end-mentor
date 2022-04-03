@@ -1,7 +1,7 @@
 .Footer {
   background-color: #90d4c5;
+  height: 350px;
 }
-
 .FooterWrapper {
   text-align: center;
   display: flex;
@@ -23,12 +23,18 @@
 }
 
 .Footer path {
-  fill: var(--Dark-moderate-cyan);
+  fill: var(--Dark-desaturated-cyan);
 }
 
 .Socials path {
+  opacity: 0.8;
   transition: all 0.2s linear;
   cursor: pointer;
+}
+
+.Socials svg {
+  height: 22px;
+  width: auto;
 }
 
 .Socials path:hover {
