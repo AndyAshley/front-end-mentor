@@ -13,6 +13,12 @@ export default function Home() {
       <Head>
         <title>Frontend Mentor | Sunnyside agency landing page</title>
         <link rel="icon" href="/favicon-32x32.png" />
+        <meta property="og:title" content="Sunnyside Agency" />
+        <meta property="og:site_name" content="Sunnyside Agency" />
+        <meta property="og:url" content="https://sunnyside-landing-gs29hts.netlify.app/" />
+        <meta property="og:description" content="We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/logo.svg" />
       </Head>
       <header>
         <SiteHeader />
