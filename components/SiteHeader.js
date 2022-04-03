@@ -9,7 +9,7 @@ export default function SiteHeader() {
       <TopNav />
       <Container className="d-flex flex-column align-items-center pt-5 mt-5 px-0">
         <h1>WE ARE CREATIVES</h1>
-        <img src="/icon-arrow-down.svg" aria-hidden="true" className={classNames(styles.ArrowDown, "my-5")} />
+        <img src="/icon-arrow-down.svg" alt="Down Arrow" className={classNames(styles.ArrowDown, "my-5")} />
       </Container>
     </Container>
   );

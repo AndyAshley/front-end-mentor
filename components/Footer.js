@@ -11,7 +11,7 @@ export default function Footer() {
       <Container className={styles.FooterWrapper}>
         <div className="text-center mb-4 mt-2" id="logo">
           {/* {sunnysideLogo} */}
-          <img src="/logo-dark.svg" alt="" fill="var(--Dark-blue)" style={{ width: "175px", opacity: "0.8" }} />
+          <img src="/logo-dark.svg" alt="sunnyside logo footer" style={{ width: "175px", opacity: "0.8" }} />
         </div>
         <div className="d-flex justify-content-between w-100 px-4 mt-3">
           <a href="#" target="_blank" rel="noopener noreferrer">

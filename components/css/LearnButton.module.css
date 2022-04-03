@@ -6,8 +6,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.ButtonContainer a {
-  text-decoration: none;
+.ButtonContainer span {
   color: var(--Very-dark-desaturated-blue);
 }
 
@@ -32,7 +31,7 @@
 }
 
 @media (min-width: 1600px) {
-  .ButtonContainer a {
+  .ButtonContainer span {
     font-size: 24px;
   }
 }
