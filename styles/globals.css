@@ -89,6 +89,10 @@ a {
   margin-block-end: 19px;
 }
 
+.offcanvas {
+  background-color: transparent !important;
+}
+
 .main-nav a {
   color: white;
 }
