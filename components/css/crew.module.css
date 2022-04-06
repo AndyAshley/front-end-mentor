@@ -1,0 +1,56 @@
+.CrewWrapper {
+  transition: all 0.2s ease-in-out;
+  padding-inline: 1.5rem;
+  z-index: 2;
+}
+
+.ImageWrapper {
+  border-bottom: 1px solid #383b4b;
+  text-align: center;
+}
+
+.CrewWrapper h1 {
+  font-family: "Barlow Condensed";
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.CrewWrapper h1 span {
+  font-weight: 700;
+  opacity: 0.25;
+  margin-right: 16px;
+}
+
+.CrewData {
+  text-align: center;
+}
+
+.CrewData h2 {
+  font-family: "Bellefair";
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-block-end: 16px;
+}
+
+.CrewData p {
+  font-family: "Barlow";
+  font-size: 15px;
+  line-height: 25px;
+  color: #d0d6f9;
+}
+
+.CrewData span {
+  display: block;
+  font-family: "Bellefair";
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-block-end: 8px;
+}

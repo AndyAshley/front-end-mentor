@@ -1,0 +1,18 @@
+.ToggleButton {
+  background: unset;
+  border: unset;
+  margin-inline: 13px;
+  padding-bottom: 8px;
+  color: var(--space-blue);
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  transition: all 0.1s linear;
+}
+
+.ToggleButton:hover {
+  border-bottom: 2px solid #85868b !important;
+}

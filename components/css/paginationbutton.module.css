@@ -1,0 +1,16 @@
+.PaginationButton {
+  background: unset;
+  border: unset;
+  margin-inline: 8px;
+  margin-block: 32px;
+  background-color: var(--space-blue);
+  border-radius: 2rem;
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.PaginationButton:hover {
+  opacity: 0.5 !important;
+}

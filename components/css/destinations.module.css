@@ -1,0 +1,67 @@
+.DestinationWrapper {
+  transition: all 0.2s ease-in-out;
+  padding-inline: 1.5rem;
+}
+
+.DestinationWrapper h1 {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.DestinationWrapper h1 span {
+  font-weight: 700;
+  opacity: 0.25;
+  margin-right: 16px;
+}
+
+.DestinationWrapper h2 {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.LocationDescription {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #d0d6f9;
+  border-bottom: 1px solid #383b4b;
+  color: var(--space-blue);
+  padding-bottom: 2.5rem;
+}
+
+.DestinationData p {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  padding-bottom: 12px;
+}
+
+.DestinationData span {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #ffffff;
+}

@@ -1,0 +1,22 @@
+.NumberedButton {
+  background: unset;
+  border: unset;
+  margin-inline: 8px;
+  margin-block: 34px;
+  border: 1px solid #ffffff;
+  border-radius: 2rem;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  font-family: "Bellefair";
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.NumberedButton:hover {
+  border: 1px solid #ffffff !important;
+}
