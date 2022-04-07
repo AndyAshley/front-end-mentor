@@ -1,5 +1,5 @@
 import data from "./Data/data.json";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import PaginationButton from "./PaginationButton";
 import styles from "../components/css/crew.module.css";
@@ -7,7 +7,6 @@ import classNames from "classnames";
 import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper";
 import "swiper/css";
-import { useEffect } from "react";
 
 export default function CrewViewer() {
   const douglas = data.crew[0];
@@ -21,7 +20,7 @@ export default function CrewViewer() {
   const [victorActive, setVictorActive] = useState(false);
   const [anoushehActive, setAnoushehActive] = useState(false);
 
-  const swiper = document.querySelector(".swiper").swiper;
+  // const slide = document.querySelector(".swiper").swiper;
 
   return (
     <Container fluid className={styles.CrewWrapper}>
@@ -30,7 +29,7 @@ export default function CrewViewer() {
           <span>02</span>Meet Your Crew
         </h1>
         <Col className={styles.ImageWrapper}>
-          <Swiper className="mySwiper" mousewheel={true}>
+          <Swiper className="mySwiper" id="crewSwipe" mousewheel={true}>
             <SwiperSlide>
               {({ isActive }) => <img src={douglas.images.webp} alt={"Image of " + active.name} className="mt-4" height="222px" width="auto" {...(isActive ? (setActive(douglas), setDouglasActive(true)) : setDouglasActive(false))} />}
             </SwiperSlide>
@@ -46,7 +45,7 @@ export default function CrewViewer() {
         <Col className="text-center">
           <PaginationButton
             setActive={() => {
-              swiper.slideTo(0, 800);
+              document.querySelector(".swiper").swiper.slideTo(0, 800);
               setActive(douglas);
               setDouglasActive(true);
               setMarkActive(false);
@@ -57,7 +56,7 @@ export default function CrewViewer() {
           />
           <PaginationButton
             setActive={() => {
-              swiper.slideTo(1, 800);
+              document.querySelector(".swiper").swiper.slideTo(1, 800);
               setActive(mark);
               setMarkActive(true);
               setDouglasActive(false);
@@ -68,7 +67,7 @@ export default function CrewViewer() {
           />
           <PaginationButton
             setActive={() => {
-              swiper.slideTo(2, 800);
+              document.querySelector(".swiper").swiper.slideTo(2, 800);
               setActive(victor);
               setVictorActive(true);
               setDouglasActive(false);
@@ -79,7 +78,7 @@ export default function CrewViewer() {
           />
           <PaginationButton
             setActive={() => {
-              swiper.slideTo(3, 800);
+              document.querySelector(".swiper").swiper.slideTo(3, 800);
               setAnoushehActive(true);
               setDouglasActive(false);
               setMarkActive(false);
