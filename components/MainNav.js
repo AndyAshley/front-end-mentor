@@ -5,9 +5,9 @@ export default function MainNav() {
   return (
     <>
       <Navbar collapseOnSelect expand="md" variant="dark" className="main-nav d-none d-md-block d-flex flex-row align-items-center">
-        <div className="ms-5">
-          <img src="/images/shared/logo.svg" />
-        </div>
+        <Navbar.Brand href="/" className="ms-5">
+          <img src="/images/shared/logo.svg" alt="Space Tourism Logo" />
+        </Navbar.Brand>
         <Container className="h-100">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
@@ -41,7 +41,9 @@ export default function MainNav() {
       <Navbar expand={false} className="main-nav py-0 d-block d-md-none" style={{ zIndex: "4" }}>
         <Container fluid>
           <Container className="d-flex justify-content-between">
-            <img src="/images/shared/logo.svg" height="40px" width="40px" />
+            <Navbar.Brand href="/">
+              <img src="/images/shared/logo.svg" alt="Space Tourism Logo" />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar">
               <img src="/images/shared/icon-hamburger.svg" />
             </Navbar.Toggle>
