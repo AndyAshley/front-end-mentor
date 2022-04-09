@@ -4,9 +4,13 @@
 }
 
 .ImageWrapper {
-  /* max-width: 375px; */
   text-align: center;
   padding: 0;
+}
+
+.ImageWrapper img {
+  height: 222px;
+  width: auto;
 }
 
 .CrewWrapper h1 {
@@ -55,4 +59,44 @@
   color: #d0d6f9;
   text-transform: uppercase;
   margin-block-end: 9px;
+}
+
+@media (min-width: 545px) {
+  .ImageWrapper img {
+    height: 300px;
+    width: auto;
+  }
+}
+
+@media (min-width: 700px) {
+  .ImageWrapper img {
+    height: 312px;
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .CrewWrapper h1 {
+    font-size: 20px;
+    line-height: 60px;
+    letter-spacing: 3.375px;
+    margin-inline-start: 38.5px;
+    margin-block-end: 24px;
+  }
+  .CrewData {
+    padding-inline: 155px;
+  }
+  .CrewData span {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+  .CrewData h2 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  .CrewData p {
+    font-size: 16px;
+    line-height: 28px;
+  }
 }

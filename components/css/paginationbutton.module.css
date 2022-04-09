@@ -11,6 +11,22 @@
   transition: all 0.1s linear;
 }
 
-.PaginationButton:hover {
-  opacity: 0.5 !important;
+@media (min-width: 768px) {
+  .PaginationButton {
+    margin-block: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .PaginationButton:hover {
+    opacity: 0.5 !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .PaginationButton {
+    height: 15px;
+    width: 15px;
+    margin-inline: 12px;
+  }
 }

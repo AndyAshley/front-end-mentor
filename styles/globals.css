@@ -8,6 +8,7 @@
 html,
 body {
   font-size: 16px;
+  min-height: 100vh;
 }
 
 * {
@@ -18,8 +19,6 @@ body {
 }
 
 main {
-  /* padding: 5rem 0; */
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,6 +65,31 @@ main {
   opacity: 0.3;
   filter: blur(2px);
   z-index: 1;
+}
+
+.douglas-bg {
+  background-image: url(/images/crew/image-douglas-hurley.png);
+  background-position: bottom;
+  background-size: 177px 222px;
+  background-repeat: no-repeat;
+}
+.mark-bg {
+  background-image: url(/images/crew/image-mark-shuttleworth.png);
+  background-position: bottom;
+  background-size: 154px 222px;
+  background-repeat: no-repeat;
+}
+.victor-bg {
+  background-image: url(/images/crew/image-victor-glover.png);
+  background-position: bottom;
+  background-size: 181px 222px;
+  background-repeat: no-repeat;
+}
+.anousheh-bg {
+  background-image: url(/images/crew/image-anousheh-ansari.png);
+  background-position: bottom;
+  background-size: 223px 226px;
+  background-repeat: no-repeat;
 }
 
 /* Technology Globals */
@@ -115,6 +139,12 @@ a {
   background: transparent url(/images/shared/icon-close.svg) no-repeat !important;
 }
 
+.crewSwiper {
+  height: 250px;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
 /* for Firefox only (doesnt support backdrop-filter) */
 @-moz-document url-prefix() {
   .blur {
@@ -151,9 +181,36 @@ a {
   .technology-bg {
     background-image: url(/images/technology/background-technology-tablet.jpg);
   }
+  .crewSwiper {
+    height: 650px;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .douglas-bg {
+    background-position: bottom;
+    background-size: 50%;
+  }
+  .mark-bg {
+    background-position: bottom left 125px;
+    background-size: 45%;
+    background-position: bottom left 180px;
+  }
+  .victor-bg {
+    background-position: bottom;
+    background-size: 56%;
+  }
+  .anousheh-bg {
+    background-position: bottom;
+    background-size: 65%;
+  }
 }
 
 @media (min-width: 1440px) {
+  main {
+    min-height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
   .index-bg {
     background-image: url(/images/home/background-home-desktop.jpg);
   }
@@ -166,5 +223,53 @@ a {
   }
   .technology-bg {
     background-image: url(/images/technology/background-technology-desktop.jpg);
+  }
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .crewSwiper {
+    height: 900px;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .douglas-bg {
+    background-image: url(/images/crew/image-douglas-hurley.png);
+    background-position: bottom left 100px;
+    background-size: 69%;
+    background-repeat: no-repeat;
+  }
+  .mark-bg {
+    background-image: url(/images/crew/image-mark-shuttleworth.png);
+    background-position: bottom left 100px;
+    background-size: 65%;
+    background-repeat: no-repeat;
+  }
+  .victor-bg {
+    background-image: url(/images/crew/image-victor-glover.png);
+    background-position: bottom left 50px;
+    background-size: 75%;
+    background-repeat: no-repeat;
+  }
+  .anousheh-bg {
+    background-image: url(/images/crew/image-anousheh-ansari.png);
+    background-position: bottom left 10px;
+    background-size: 85%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 1800px) {
+  .mark-bg {
+    background-image: url(/images/crew/image-mark-shuttleworth.png);
+    background-position: bottom left 100px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 2000px) {
+  .crewSwiper {
+    height: 2000px;
   }
 }

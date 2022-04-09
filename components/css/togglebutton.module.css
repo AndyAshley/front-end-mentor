@@ -13,6 +13,17 @@
   transition: all 0.1s linear;
 }
 
-.ToggleButton:hover {
-  border-bottom: 2px solid #85868b !important;
+@media (min-width: 768px) {
+  .ToggleButton {
+    margin-top: 37px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ToggleButton:hover {
+    border-bottom: 2px solid #85868b !important;
+  }
 }

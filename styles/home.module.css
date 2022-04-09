@@ -36,7 +36,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
   cursor: pointer;
 }
@@ -48,23 +47,93 @@
   font-size: 20px;
   letter-spacing: 1.25px;
   margin-top: 0.5rem;
+  z-index: 1;
 }
 
-.Explore::before {
-  content: "";
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: #fff;
-  position: absolute;
-  top: center;
-  opacity: 0;
-  transition: 200ms linear;
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+@media (min-width: 768px) {
+  .HomeText h1 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+  .HomeText span {
+    font-size: 150px;
+    line-height: 150px;
+  }
+  .HomeText p {
+    font-size: 16px;
+    line-height: 28px;
+    padding-inline: 116px;
+  }
+  .ExploreWrapper {
+    padding-top: 7rem;
+  }
+  .Explore {
+    height: 242px;
+    width: 242px;
+  }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1440px) {
+  .HomeWrapper {
+    margin-block-end: 50px;
+  }
+  .ExploreWrapper {
+    padding-top: 0rem;
+  }
+  .Explore {
+    height: 274px;
+    width: 274px;
+    margin-inline: 0;
+    margin-inline-start: 225px;
+  }
   .Explore:hover::before {
-    opacity: 0.3;
+    animation: ExploreHover 1.2s linear infinite alternate;
+  }
+  .Explore::before {
+    content: "";
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: center;
+    opacity: 0;
+    transition: 1000ms ease-in-out;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    z-index: 1;
+  }
+  .Explore span {
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 2px;
+  }
+  .HomeText h1 {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+  .HomeText span {
+    font-size: 150px;
+    line-height: 172px;
+  }
+  .HomeText p {
+    padding-inline: 0px;
+    padding-inline-end: 145px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+@keyframes ExploreHover {
+  from {
+    height: 275px;
+    width: 275px;
+    opacity: 0;
+  }
+  to {
+    height: 325px;
+    width: 325px;
+    opacity: 0.5;
   }
 }

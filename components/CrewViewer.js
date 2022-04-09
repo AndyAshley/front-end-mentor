@@ -19,14 +19,14 @@ export default function CrewViewer() {
 
   return (
     <Container fluid className={styles.CrewWrapper}>
-      <Row className="d-flex flex-column flex-lg-row juistify-content-center align-items-center">
+      <Row className="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-evenly align-items-center">
         <h1 className="text-center text-lg-left pt-5">
           <span>02</span>Meet Your Crew
         </h1>
-        <Col className={styles.ImageWrapper}>
-          <img src={active.images.webp} alt={"Image of " + active.name} className="mt-4" height="222px" width="auto" />
+        <Col xl={{ span: 6, order: 2 }} md={{ order: "last" }} xs={{ order: `first` }} className={styles.ImageWrapper}>
+          <img src={active.images.webp} alt={"Image of " + active.name} className="mt-4" />
         </Col>
-        <Col className="text-center">
+        <Col xl={{ span: 6, order: 1 }} className="text-center">
           <PaginationButton
             setActive={() => {
               setActive(douglas);
@@ -67,11 +67,12 @@ export default function CrewViewer() {
             }}
             style={{ opacity: anoushehActive === true ? "1" : "0.17" }}
           />
-        </Col>
-        <Col className={styles.CrewData}>
-          <span>{active.role}</span>
-          <h2>{active.name}</h2>
-          <p>{active.bio}</p>
+
+          <Col className={styles.CrewData}>
+            <span>{active.role}</span>
+            <h2>{active.name}</h2>
+            <p>{active.bio}</p>
+          </Col>
         </Col>
       </Row>
     </Container>

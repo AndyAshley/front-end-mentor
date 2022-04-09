@@ -9,16 +9,12 @@ import CrewViewer2 from "@components/CrewViewer2";
 export default function Crew() {
   return (
     <Container fluid className="crew-bg px-0">
-      <Head>
-        <title>Frontend Mentor | Space tourism website</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      </Head>
-      <MainNav />
+      <header>
+        <MainNav />
+      </header>
       <main>
         <CrewViewer2 />
       </main>
-      {/* 
-        <Footer /> */}
     </Container>
   );
 }
