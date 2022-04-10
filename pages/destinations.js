@@ -1,10 +1,7 @@
-import Head from "next/head";
 import { Container } from "react-bootstrap";
 import MainNav from "@components/MainNav";
-import Footer from "@components/Footer";
-import { Main } from "next/document";
+
 import DestinationViewer from "../components/DestinationViewer";
-import DestinationViewer2 from "../components/DestinationViewer2";
 
 export default function Destination() {
   return (
@@ -13,7 +10,7 @@ export default function Destination() {
         <MainNav />
       </header>
       <main>
-        <DestinationViewer2 />
+        <DestinationViewer />
       </main>
     </Container>
   );

@@ -76,6 +76,7 @@
 
 @media (min-width: 1440px) {
   .HomeWrapper {
+    margin-block-start: 150px;
     margin-block-end: 50px;
   }
   .ExploreWrapper {
@@ -135,5 +136,24 @@
     height: 325px;
     width: 325px;
     opacity: 0.5;
+  }
+}
+
+@media (min-width: 1920px) {
+  .ExploreWrapper {
+    padding-bottom: 4rem;
+  }
+  .Explore span {
+    font-size: 32px;
+  }
+  .HomeText h1 {
+    font-size: 40px;
+  }
+  .HomeText span {
+    font-size: 180px;
+  }
+  .HomeText p {
+    padding-inline-end: 0px;
+    font-size: 24px;
   }
 }

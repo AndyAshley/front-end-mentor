@@ -61,6 +61,11 @@
   opacity: 0.25;
 }
 
+.MobileIcon {
+  height: 40px !important;
+  width: 40px !important;
+}
+
 @media (min-width: 1024px) {
   .NavWrapper {
     width: 800px;

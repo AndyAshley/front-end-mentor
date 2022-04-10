@@ -1,4 +1,4 @@
-.CrewWrapper {
+.TechWrapper {
   transition: all 0.2s ease-in-out;
   padding-inline: 0rem;
 }
@@ -13,7 +13,7 @@
   width: auto;
 }
 
-.CrewWrapper h1 {
+.TechWrapper h1 {
   font-family: "Barlow Condensed";
   font-size: 16px;
   line-height: 19px;
@@ -22,19 +22,19 @@
   color: #ffffff;
 }
 
-.CrewWrapper h1 span {
+.TechWrapper h1 span {
   display: inline-block;
   font-weight: 700;
   opacity: 0.25;
   margin-right: 16px;
 }
 
-.CrewData {
+.TechData {
   text-align: center;
   padding-inline: 24px;
 }
 
-.CrewData h2 {
+.TechData h2 {
   font-family: "Bellefair";
   font-size: 24px;
   line-height: 28px;
@@ -43,14 +43,14 @@
   margin-block-end: 16px;
 }
 
-.CrewData p {
+.TechData p {
   font-family: "Barlow";
   font-size: 15px;
   line-height: 25px;
   color: #d0d6f9;
 }
 
-.CrewData span {
+.TechData span {
   display: block;
   font-family: "Barlow Condensed";
   font-size: 14px;
@@ -68,35 +68,64 @@
   }
 }
 
-@media (min-width: 700px) {
-  .ImageWrapper img {
-    height: 312px;
-    width: auto;
-  }
-}
-
 @media (min-width: 768px) {
-  .CrewWrapper h1 {
+  .TechWrapper h1 {
     font-size: 20px;
     line-height: 60px;
     letter-spacing: 3.375px;
     margin-inline-start: 38.5px;
     margin-block-end: 24px;
   }
-  .CrewData {
+  .TechData {
     padding-inline: 155px;
   }
-  .CrewData span {
+  .TechData span {
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.7px;
   }
-  .CrewData h2 {
+  .TechData h2 {
     font-size: 40px;
     line-height: 46px;
   }
-  .CrewData p {
+  .TechData p {
     font-size: 16px;
     line-height: 28px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .TechWrapper h1 {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+    margin-block-end: 66px;
+    padding-inline-start: 40px;
+  }
+
+  .TechData {
+    padding-inline: 0;
+    width: 470px;
+    height: 316px;
+    margin-right: auto;
+  }
+  .TechData span {
+    text-align: left;
+  }
+  .TechData h2 {
+    font-size: 56px;
+    line-height: 64px;
+    text-align: left;
+  }
+  .TechData p {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1920px) {
+  .TechWrapper h1 {
+    font-size: 40px;
   }
 }

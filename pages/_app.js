@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@styles/globals.css";
 import Head from "next/head";
-import MainNav from "@components/MainNav";
 
 function Application({ Component, pageProps }) {
   return (

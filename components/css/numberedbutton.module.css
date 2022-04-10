@@ -33,3 +33,12 @@
     border: 1px solid #ffffff !important;
   }
 }
+
+@media (min-width: 1440px) {
+  .NumberedButton {
+    height: 80px;
+    width: 80px;
+    border-radius: 3rem;
+    margin-block-start: 0px;
+  }
+}

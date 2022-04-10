@@ -1,9 +1,11 @@
 import data from "./Data/data.json";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import NumberedButton from "./NumberedButton";
 import styles from "../components/css/technologyviewer.module.css";
 import classNames from "classnames";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export default function TechnologyViewer() {
   const launch = data.technology[0];
@@ -16,17 +18,34 @@ export default function TechnologyViewer() {
   const [capsuleActive, setCapsuleActive] = useState(false);
 
   return (
-    <Container fluid className={styles.CrewWrapper}>
-      <Row className="d-flex flex-column flex-lg-row juistify-content-center align-items-center mx-0">
-        <h1 className="text-center text-lg-left pt-5">
-          <span>03</span>Space Launch 101
-        </h1>
-        <Col className={styles.ImageWrapper}>
-          <img src={active.images.landscape} alt={active.name + " image"} className="mt-4 img-fluid" />
+    <Container fluid className={styles.TechWrapper}>
+      <h1 className="text-center text-md-start pt-5">
+        <span>03</span>Space Launch 101
+      </h1>
+      <Row className="d-flex flex-column flex-xxl-row justify-content-center align-items-center mx-0">
+        <Col xxl={{ span: 5, order: 3 }} className={styles.ImageWrapper}>
+          <Swiper className="technology-swiper">
+            <SwiperSlide className="launch-bg">
+              {({ isActive }) => {
+                isActive ? (setActive(launch), setLaunchActive(true)) : setLaunchActive(false);
+              }}
+            </SwiperSlide>
+            <SwiperSlide className="port-bg">
+              {({ isActive }) => {
+                isActive ? (setActive(port), setPortActive(true)) : setPortActive(false);
+              }}
+            </SwiperSlide>
+            <SwiperSlide className="capsule-bg">
+              {({ isActive }) => {
+                isActive ? (setActive(capsule), setCapsuleActive(true)) : setCapsuleActive(false);
+              }}
+            </SwiperSlide>
+          </Swiper>
         </Col>
-        <Col className="text-center">
+        <Col xxl={{ span: 2, order: 1 }} className="text-center d-xxl-flex flex-column align-items-center">
           <NumberedButton
             setActive={() => {
+              document.querySelector(".swiper").swiper.slideTo(0, 800);
               setActive(launch);
               setLaunchActive(true);
               setPortActive(false);
@@ -37,6 +56,7 @@ export default function TechnologyViewer() {
           />
           <NumberedButton
             setActive={() => {
+              document.querySelector(".swiper").swiper.slideTo(1, 800);
               setActive(port);
               setPortActive(true);
               setLaunchActive(false);
@@ -47,6 +67,7 @@ export default function TechnologyViewer() {
           />
           <NumberedButton
             setActive={() => {
+              document.querySelector(".swiper").swiper.slideTo(2, 800);
               setActive(capsule);
               setCapsuleActive(true);
               setLaunchActive(false);
@@ -56,7 +77,7 @@ export default function TechnologyViewer() {
             btnText="3"
           />
         </Col>
-        <Col className={styles.CrewData}>
+        <Col xl={{ span: 5, order: 2 }} className={styles.TechData}>
           <span>The Terminology...</span>
           <h2>{active.name}</h2>
           <p>{active.description}</p>

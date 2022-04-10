@@ -70,27 +70,31 @@ main {
 
 .douglas-bg {
   background-image: url(/images/crew/image-douglas-hurley.png);
-  background-position: bottom;
-  background-size: 177px 222px;
+  background-position: 50% 100%;
+  background-size: 177px auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .mark-bg {
   background-image: url(/images/crew/image-mark-shuttleworth.png);
-  background-position: bottom;
-  background-size: 154px 222px;
+  background-position: 40% 100%;
+  background-size: 154px auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .victor-bg {
   background-image: url(/images/crew/image-victor-glover.png);
-  background-position: bottom;
-  background-size: 181px 222px;
+  background-position: 50% 100%;
+  background-size: 181px auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .anousheh-bg {
   background-image: url(/images/crew/image-anousheh-ansari.png);
-  background-position: bottom;
-  background-size: 223px 226px;
+  background-position: 50% 100%;
+  background-size: 223px auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Technology Globals */
@@ -103,8 +107,27 @@ main {
   min-height: 100vh;
 }
 
-.main-nav {
-  top: 24px;
+.launch-bg {
+  background-image: url(/images/technology/image-launch-vehicle-landscape.jpg);
+  background-position: center;
+  background-size: auto 170px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.port-bg {
+  background-image: url(/images/technology/image-spaceport-landscape.jpg);
+  background-position: center;
+  background-size: auto 170px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.capsule-bg {
+  background-image: url(/images/technology/image-space-capsule-landscape.jpg);
+  background-position: center;
+  background-size: auto 170px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
@@ -146,6 +169,12 @@ a {
   margin: 0 !important;
 }
 
+.technology-swiper {
+  height: calc(170px + 20vw);
+  width: 100% !important;
+  margin: 0 !important;
+}
+
 /* for Firefox only (doesnt support backdrop-filter) */
 @-moz-document url-prefix() {
   .blur {
@@ -168,6 +197,19 @@ a {
   backdrop-filter: blur(81.5485px);
 }
 
+@media (min-width: 425px) {
+  .launch-bg {
+    background-size: auto calc(170px + 20vw);
+  }
+  .port-bg {
+    background-size: auto calc(170px + 20vw);
+  }
+
+  .capsule-bg {
+    background-size: auto calc(170px + 20vw);
+  }
+}
+
 @media (min-width: 768px) {
   .index-bg {
     background-image: url(/images/home/background-home-tablet.jpg);
@@ -188,21 +230,35 @@ a {
     margin: 0 !important;
   }
   .douglas-bg {
-    background-position: bottom;
-    background-size: 50%;
+    background-size: 400px auto;
   }
   .mark-bg {
-    background-position: bottom left 125px;
-    background-size: 45%;
-    background-position: bottom left 180px;
+    background-size: 340px auto;
   }
   .victor-bg {
-    background-position: bottom;
-    background-size: 56%;
+    background-size: 425px auto;
   }
   .anousheh-bg {
+    background-size: 500px auto;
+  }
+  .launch-bg {
+    background-image: url(/images/technology/image-launch-vehicle-landscape.jpg);
+    background-size: 102% auto;
+  }
+  .port-bg {
+    background-image: url(/images/technology/image-spaceport-landscape.jpg);
+    background-size: 100% auto;
+  }
+
+  .capsule-bg {
+    background-image: url(/images/technology/image-space-capsule-landscape.jpg);
+    background-size: 100% auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .index-bg {
     background-position: bottom;
-    background-size: 65%;
   }
 }
 
@@ -234,43 +290,71 @@ a {
     width: 100% !important;
     margin: 0 !important;
   }
+  .technology-swiper {
+    height: calc(170px + 24vw);
+  }
   .douglas-bg {
-    background-image: url(/images/crew/image-douglas-hurley.png);
-    background-position: bottom left 100px;
-    background-size: 69%;
-    background-repeat: no-repeat;
+    background-size: auto 712px;
   }
   .mark-bg {
-    background-image: url(/images/crew/image-mark-shuttleworth.png);
-    background-position: bottom left 100px;
-    background-size: 65%;
-    background-repeat: no-repeat;
+    background-size: auto 650px;
   }
   .victor-bg {
-    background-image: url(/images/crew/image-victor-glover.png);
-    background-position: bottom left 50px;
-    background-size: 75%;
-    background-repeat: no-repeat;
+    background-size: auto 680px;
   }
   .anousheh-bg {
-    background-image: url(/images/crew/image-anousheh-ansari.png);
-    background-position: bottom left 10px;
-    background-size: 85%;
-    background-repeat: no-repeat;
+    background-size: auto 600px;
+  }
+  #text-row {
+    margin-inline-start: 2em;
+  }
+  .launch-bg {
+    background-image: url(/images/technology/image-launch-vehicle-portrait.jpg);
+    background-size: 100% auto;
+  }
+  .port-bg {
+    background-image: url(/images/technology/image-spaceport-portrait.jpg);
+    background-size: 100% auto;
+  }
+
+  .capsule-bg {
+    background-image: url(/images/technology/image-space-capsule-portrait.jpg);
+    background-size: 100% auto;
   }
 }
 
-@media (min-width: 1800px) {
-  .mark-bg {
-    background-image: url(/images/crew/image-mark-shuttleworth.png);
-    background-position: bottom left 100px;
-    background-size: 60%;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (min-width: 2000px) {
+@media (min-width: 1920px) {
   .crewSwiper {
-    height: 2000px;
+    height: 1000px;
+  }
+  .douglas-bg {
+    background-size: auto 850px;
+  }
+  .mark-bg {
+    background-size: auto 800px;
+  }
+  .victor-bg {
+    background-size: auto 800px;
+  }
+  .anousheh-bg {
+    background-size: auto 780px;
+  }
+}
+
+@media (min-width: 2200px) {
+  .crewSwiper {
+    height: 1000px;
+  }
+  .douglas-bg {
+    background-size: auto 950px;
+  }
+  .mark-bg {
+    background-size: auto 950px;
+  }
+  .victor-bg {
+    background-size: auto 950px;
+  }
+  .anousheh-bg {
+    background-size: auto 950px;
   }
 }

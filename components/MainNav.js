@@ -103,11 +103,11 @@ export default function MainNav() {
         </Nav>
       </Container>
 
-      <Navbar expand={false} className="main-nav py-0 d-block d-md-none w-100" style={{ zIndex: "500" }}>
-        <Container fluid>
+      <Navbar expand={false} className="d-block d-md-none w-100 p-0" style={{ zIndex: "500" }}>
+        <Container fluid style={{ paddingTop: "24px" }}>
           <Container className="d-flex justify-content-between">
-            <Navbar.Brand href="/">
-              <img src="/images/shared/logo.svg" alt="Space Tourism Logo" />
+            <Navbar.Brand href="/" className="m-0">
+              <img src="/images/shared/logo.svg" alt="Space Tourism Logo" className={styles.MobileIcon} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar">
               <img src="/images/shared/icon-hamburger.svg" />
