@@ -73,28 +73,24 @@ main {
   background-position: 50% 100%;
   background-size: 177px auto;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 .mark-bg {
   background-image: url(/images/crew/image-mark-shuttleworth.png);
   background-position: 40% 100%;
   background-size: 154px auto;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 .victor-bg {
   background-image: url(/images/crew/image-victor-glover.png);
   background-position: 50% 100%;
   background-size: 181px auto;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 .anousheh-bg {
   background-image: url(/images/crew/image-anousheh-ansari.png);
   background-position: 50% 100%;
   background-size: 223px auto;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 /* Technology Globals */
@@ -112,14 +108,12 @@ main {
   background-position: center;
   background-size: auto 170px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 .port-bg {
   background-image: url(/images/technology/image-spaceport-landscape.jpg);
   background-position: center;
   background-size: auto 170px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .capsule-bg {
@@ -127,7 +121,6 @@ main {
   background-position: center;
   background-size: auto 170px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 a {
