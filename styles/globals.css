@@ -30,7 +30,7 @@ main {
 .index-bg {
   background-image: url(/images/home/background-home-mobile.jpg);
   background-size: cover;
-  background-position: center center fixed;
+  background-position: center center;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
@@ -40,7 +40,7 @@ main {
 .destination-bg {
   background-image: url(/images/destination/background-destination-mobile.jpg);
   background-size: cover;
-  background-position: center center fixed;
+  background-position: center center;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
@@ -60,7 +60,7 @@ main {
   height: 100%;
   background-image: url(/images/crew/background-crew-mobile.jpg);
   background-size: cover;
-  background-position: center center fixed;
+  background-position: center center;
   background-repeat: no-repeat;
   mix-blend-mode: screen;
   opacity: 0.3;
@@ -98,7 +98,7 @@ main {
 .technology-bg {
   background-image: url(/images/technology/background-technology-mobile.jpg);
   background-size: cover;
-  background-position: center center fixed;
+  background-position: center center;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
