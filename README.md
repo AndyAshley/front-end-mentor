@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/AndyAshley/front-end-mentor/tree/space-tourism-website)
-- Live Site URL: [Netlify Site](https://radiant-lokum-6143fa.netlify.app/)
+- Live Site URL: [Netlify Site](https://radiant-lokum-6143fa.netlify.app/)  
   [![Netlify Status](https://api.netlify.com/api/v1/badges/1dc6736a-0fa4-475a-b1fb-0db3c2de7185/deploy-status)](https://app.netlify.com/sites/radiant-lokum-6143fa/deploys)
 
 ## My process
@@ -52,7 +52,6 @@ Users should be able to:
 - [Next.js](https://nextjs.org/) - React framework
 - [SwiperJS](https://swiperjs.com/)
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -65,8 +64,6 @@ I want to add in some [three.js](https://threejs.org/) for the planets at some p
 ### Useful resources
 
 - [swiperJS](https://swiperjs.com/) - Swiper is the most modern free mobile touch slider with hardware accelerated transitions and amazing native behavior.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
