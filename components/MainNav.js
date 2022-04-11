@@ -48,7 +48,7 @@ export default function MainNav() {
                     Home
                   </a>
                 </Link>
-                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/" ? "1" : "" }}>
+                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/" ? "1" : "0" }}>
                   {" "}
                 </span>
               </li>
@@ -66,7 +66,7 @@ export default function MainNav() {
                     Desinations
                   </a>
                 </Link>
-                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/destinations" ? "1" : "" }}></span>
+                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/destinations" ? "1" : "0" }}></span>
               </li>
               <li>
                 <Link href="/crew">
@@ -82,7 +82,7 @@ export default function MainNav() {
                     Crew
                   </a>
                 </Link>
-                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/crew" ? "1" : "" }}></span>
+                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/crew" ? "1" : "0" }}></span>
               </li>
               <li>
                 <Link href="/technology">
@@ -98,7 +98,7 @@ export default function MainNav() {
                     Technology
                   </a>
                 </Link>
-                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/technology" ? "1" : "" }}></span>
+                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/technology" ? "1" : "0" }}></span>
               </li>
             </ul>
           </div>
