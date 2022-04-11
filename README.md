@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/AndyAshley/front-end-mentor/tree/space-tourism-website)
 - Live Site URL: [Netlify Site](https://radiant-lokum-6143fa.netlify.app/)
   [![Netlify Status](https://api.netlify.com/api/v1/badges/1dc6736a-0fa4-475a-b1fb-0db3c2de7185/deploy-status)](https://app.netlify.com/sites/radiant-lokum-6143fa/deploys)
 

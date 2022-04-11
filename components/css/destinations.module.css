@@ -1,6 +1,7 @@
 .DestinationWrapper {
   transition: all 0.2s ease-in-out;
   padding-inline: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .DestinationWrapper h1 {
@@ -82,6 +83,7 @@
     letter-spacing: 3.375px;
     padding-inline-start: 14.5px;
     padding-block-end: 24px;
+    margin-bottom: 0;
   }
   .DestinationWrapper h2 {
     font-size: 80px;

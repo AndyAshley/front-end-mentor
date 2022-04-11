@@ -104,7 +104,7 @@ export default function MainNav() {
           </div>
         </Nav>
       </Container>
-      //Mobile Nav
+      {/* Mobile Nav */}
       <Navbar expand={false} className="d-block d-md-none w-100 p-0" style={{ zIndex: "500" }}>
         <Container fluid style={{ paddingTop: "24px" }}>
           <Container className="d-flex justify-content-between">

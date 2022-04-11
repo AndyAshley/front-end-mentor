@@ -48,6 +48,7 @@
   font-size: 15px;
   line-height: 25px;
   color: #d0d6f9;
+  margin-bottom: 4rem;
 }
 
 .TechData span {
@@ -91,6 +92,7 @@
   .TechData p {
     font-size: 16px;
     line-height: 28px;
+    margin-bottom: 0;
   }
 }
 

@@ -49,6 +49,7 @@
   line-height: 25px;
   color: #d0d6f9;
   padding-inline: 24px;
+  margin-bottom: 4rem;
 }
 
 .CrewData span {
@@ -94,6 +95,7 @@
     font-size: 16px;
     line-height: 28px;
     padding-inline: 10%;
+    margin-bottom: 0;
   }
 }
 

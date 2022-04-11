@@ -39,65 +39,67 @@ export default function TechnologyViewer() {
   }
 
   return (
-    <Container fluid className={styles.TechWrapper}>
-      <h1 className="text-center text-md-start pt-5">
-        <span>03</span>Space Launch 101
-      </h1>
-      <Row className="d-flex flex-column flex-xxl-row justify-content-center align-items-center mx-0">
-        <Col xxl={{ span: 5, order: 3 }} className={styles.ImageWrapper}>
-          <Swiper className="technology-swiper">
-            <SwiperSlide className="launch-bg">
-              {({ isActive }) => {
-                isActive ? (setActive(launch), setLaunchActive(true)) : setLaunchActive(false);
+    <>
+      <Container fluid className={styles.TechWrapper}>
+        <h1 className="text-center text-md-start pt-5">
+          <span>03</span>Space Launch 101
+        </h1>
+        <Row className="d-flex flex-column flex-xxl-row justify-content-center align-items-center mx-0">
+          <Col xxl={{ span: 5, order: 3 }} className={styles.ImageWrapper}>
+            <Swiper className="technology-swiper">
+              <SwiperSlide className="launch-bg">
+                {({ isActive }) => {
+                  isActive ? (setActive(launch), setLaunchActive(true)) : setLaunchActive(false);
+                }}
+              </SwiperSlide>
+              <SwiperSlide className="port-bg">
+                {({ isActive }) => {
+                  isActive ? (setActive(port), setPortActive(true)) : setPortActive(false);
+                }}
+              </SwiperSlide>
+              <SwiperSlide className="capsule-bg">
+                {({ isActive }) => {
+                  isActive ? (setActive(capsule), setCapsuleActive(true)) : setCapsuleActive(false);
+                }}
+              </SwiperSlide>
+            </Swiper>
+          </Col>
+          <Col xxl={{ span: 2, order: 1 }} className="text-center d-xxl-flex flex-column align-items-center">
+            <NumberedButton
+              setActive={() => {
+                document.querySelector(".swiper").swiper.slideTo(0, 800);
+                setButton(setActive(launch));
               }}
-            </SwiperSlide>
-            <SwiperSlide className="port-bg">
-              {({ isActive }) => {
-                isActive ? (setActive(port), setPortActive(true)) : setPortActive(false);
+              style={{ backgroundColor: launchActive === true ? "white" : "transparent", borderColor: launchActive === true ? "white" : "#42444b", color: launchActive === true ? "var(--space-dark)" : "white" }}
+              btnText="1"
+              label={"View " + launch.name}
+            />
+            <NumberedButton
+              setActive={() => {
+                document.querySelector(".swiper").swiper.slideTo(1, 800);
+                setButton(setActive(port));
               }}
-            </SwiperSlide>
-            <SwiperSlide className="capsule-bg">
-              {({ isActive }) => {
-                isActive ? (setActive(capsule), setCapsuleActive(true)) : setCapsuleActive(false);
+              style={{ backgroundColor: portActive === true ? "white" : "transparent", borderColor: portActive === true ? "white" : "#42444b", color: portActive === true ? "var(--space-dark)" : "white" }}
+              btnText="2"
+              label={"View " + port.name}
+            />
+            <NumberedButton
+              setActive={() => {
+                document.querySelector(".swiper").swiper.slideTo(2, 800);
+                setButton(setActive(capsule));
               }}
-            </SwiperSlide>
-          </Swiper>
-        </Col>
-        <Col xxl={{ span: 2, order: 1 }} className="text-center d-xxl-flex flex-column align-items-center">
-          <NumberedButton
-            setActive={() => {
-              document.querySelector(".swiper").swiper.slideTo(0, 800);
-              setButton(setActive(launch));
-            }}
-            style={{ backgroundColor: launchActive === true ? "white" : "transparent", borderColor: launchActive === true ? "white" : "#42444b", color: launchActive === true ? "var(--space-dark)" : "white" }}
-            btnText="1"
-            label={"View " + launch.name}
-          />
-          <NumberedButton
-            setActive={() => {
-              document.querySelector(".swiper").swiper.slideTo(1, 800);
-              setButton(setActive(port));
-            }}
-            style={{ backgroundColor: portActive === true ? "white" : "transparent", borderColor: portActive === true ? "white" : "#42444b", color: portActive === true ? "var(--space-dark)" : "white" }}
-            btnText="2"
-            label={"View " + port.name}
-          />
-          <NumberedButton
-            setActive={() => {
-              document.querySelector(".swiper").swiper.slideTo(2, 800);
-              setButton(setActive(capsule));
-            }}
-            style={{ backgroundColor: capsuleActive === true ? "white" : "transparent", borderColor: capsuleActive === true ? "white" : "#42444b", color: capsuleActive === true ? "var(--space-dark)" : "white" }}
-            btnText="3"
-            label={"View " + capsule.name}
-          />
-        </Col>
-        <Col xl={{ span: 5, order: 2 }} className={styles.TechData}>
-          <span>The Terminology...</span>
-          <h2>{active.name}</h2>
-          <p>{active.description}</p>
-        </Col>
-      </Row>
-    </Container>
+              style={{ backgroundColor: capsuleActive === true ? "white" : "transparent", borderColor: capsuleActive === true ? "white" : "#42444b", color: capsuleActive === true ? "var(--space-dark)" : "white" }}
+              btnText="3"
+              label={"View " + capsule.name}
+            />
+          </Col>
+          <Col xl={{ span: 5, order: 2 }} className={styles.TechData}>
+            <span>The Terminology...</span>
+            <h2>{active.name}</h2>
+            <p>{active.description}</p>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
