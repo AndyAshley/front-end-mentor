@@ -48,7 +48,7 @@ export default function MainNav() {
                     Home
                   </a>
                 </Link>
-                <span className={styles.Underline} style={{ opacity: [currentPath] == "/" ? "1" : "" }} aria-hidden="true">
+                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/" ? "1" : "" }}>
                   {" "}
                 </span>
               </li>
@@ -66,7 +66,7 @@ export default function MainNav() {
                     Desinations
                   </a>
                 </Link>
-                <span className={styles.Underline} style={{ opacity: [currentPath] == "/destinations" ? "1" : "" }} aria-hidden="true"></span>
+                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/destinations" ? "1" : "" }}></span>
               </li>
               <li>
                 <Link href="/crew">
@@ -82,7 +82,7 @@ export default function MainNav() {
                     Crew
                   </a>
                 </Link>
-                <span className={styles.Underline} style={{ opacity: [currentPath] == "/crew" ? "1" : "" }} aria-hidden="true"></span>
+                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/crew" ? "1" : "" }}></span>
               </li>
               <li>
                 <Link href="/technology">
@@ -98,7 +98,7 @@ export default function MainNav() {
                     Technology
                   </a>
                 </Link>
-                <span className={styles.Underline} style={{ opacity: [currentPath] == "/technology" ? "1" : "" }} aria-hidden="true"></span>
+                <span className={styles.Underline} aria-hidden="true" style={{ opacity: [currentPath] == "/technology" ? "1" : "" }}></span>
               </li>
             </ul>
           </div>
@@ -112,10 +112,10 @@ export default function MainNav() {
               <img src="/images/shared/logo.svg" alt="Space Tourism Logo" className={styles.MobileIcon} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar">
-              <img src="/images/shared/icon-hamburger.svg" aria-label="Show Navigation" />
+              <img src="/images/shared/icon-hamburger.svg" alt="Menu Icon" />
             </Navbar.Toggle>
           </Container>
-          <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end" className="blur">
+          <Navbar.Offcanvas id="offcanvasNavbar" aria-label="offcanvas Navbar" placement="end" className="blur">
             <Offcanvas.Header closeButton></Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
