@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/public/space-dekstop.PNG)
+![](/public/space-desktop.PNG)
 ![](/public/space-tablet.PNG)
 ![](/public/space-mobile.png)
 
