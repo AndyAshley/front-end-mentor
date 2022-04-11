@@ -19,6 +19,38 @@ export default function DestinationViewer() {
   const [europaActive, setEuropaActive] = useState(false);
   const [titanActive, setTitanActive] = useState(false);
 
+  function setButton(callback) {
+    callback;
+    if (active === moon) {
+      setMoonActive(true);
+      setMarsActive(false);
+      setEuropaActive(false);
+      setTitanActive(false);
+      return;
+    }
+    if (active === mars) {
+      setMarsActive(true);
+      setMoonActive(false);
+      setEuropaActive(false);
+      setTitanActive(false);
+      return;
+    }
+    if (active === europa) {
+      setEuropaActive(true);
+      setMoonActive(false);
+      setMarsActive(false);
+      setTitanActive(false);
+      return;
+    }
+    if (active === titan) {
+      setTitanActive(true);
+      setMoonActive(false);
+      setMarsActive(false);
+      setEuropaActive(false);
+      return;
+    }
+  }
+
   return (
     <Container fluid className={styles.DestinationWrapper}>
       <h1 className="text-center text-md-start pt-5 pt-xxl-0">
@@ -38,50 +70,38 @@ export default function DestinationViewer() {
             <ToggleButton
               setActive={(e) => {
                 document.querySelector(".swiper").swiper.slideTo(0, 800);
-                setActive(moon);
-                setMoonActive(true);
-                setMarsActive(false);
-                setEuropaActive(false);
-                setTitanActive(false);
+                setButton(setActive(moon));
               }}
               btnText="MOON"
               style={{ borderBottom: moonActive === true ? "2px solid white" : "transparent", color: moonActive === true ? "white" : "var(--space-blue)" }}
+              label={"Select " + moon.name}
             />
             <ToggleButton
               setActive={(e) => {
                 document.querySelector(".swiper").swiper.slideTo(1, 800);
-                setActive(mars);
-                setMarsActive(true);
-                setMoonActive(false);
-                setEuropaActive(false);
-                setTitanActive(false);
+                setButton(setActive(mars));
               }}
               btnText="MARS"
               style={{ borderBottom: marsActive === true ? "2px solid white" : "transparent", color: marsActive === true ? "white" : "var(--space-blue)" }}
+              label={"Select " + mars.name}
             />
             <ToggleButton
               setActive={(e) => {
                 document.querySelector(".swiper").swiper.slideTo(2, 800);
-                setActive(europa);
-                setEuropaActive(true);
-                setMoonActive(false);
-                setMarsActive(false);
-                setTitanActive(false);
+                setButton(setActive(europa));
               }}
               btnText="EUROPA"
               style={{ borderBottom: europaActive === true ? "2px solid white" : "transparent", color: europaActive === true ? "white" : "var(--space-blue)" }}
+              label={"Select " + europa.name}
             />
             <ToggleButton
               setActive={(e) => {
                 document.querySelector(".swiper").swiper.slideTo(3, 800);
-                setActive(titan);
-                setTitanActive(true);
-                setMoonActive(false);
-                setMarsActive(false);
-                setEuropaActive(false);
+                setButton(setActive(titan));
               }}
               btnText="TITAN"
               style={{ borderBottom: titanActive === true ? "2px solid white" : "transparent", color: titanActive === true ? "white" : "var(--space-blue)" }}
+              label={"Select " + titan.name}
             />
           </div>
           <h2>{active.name}</h2>

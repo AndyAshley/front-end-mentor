@@ -24,7 +24,7 @@
 }
 
 .ExploreWrapper {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .Explore {
@@ -55,6 +55,7 @@
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 3.375px;
+    padding-top: 2rem;
   }
   .HomeText span {
     font-size: 150px;
@@ -66,7 +67,7 @@
     padding-inline: 116px;
   }
   .ExploreWrapper {
-    padding-top: 7rem;
+    padding-top: 10rem;
   }
   .Explore {
     height: 242px;
@@ -78,6 +79,9 @@
   .HomeWrapper {
     margin-block-start: 150px;
     margin-block-end: 50px;
+  }
+  .HomeText h1 {
+    padding-top: 0rem;
   }
   .ExploreWrapper {
     padding-top: 0rem;

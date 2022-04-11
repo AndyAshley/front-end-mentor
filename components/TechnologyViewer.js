@@ -1,9 +1,8 @@
 import data from "./Data/data.json";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import NumberedButton from "./NumberedButton";
 import styles from "../components/css/technologyviewer.module.css";
-import classNames from "classnames";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -16,6 +15,28 @@ export default function TechnologyViewer() {
   const [launchActive, setLaunchActive] = useState(true);
   const [portActive, setPortActive] = useState(false);
   const [capsuleActive, setCapsuleActive] = useState(false);
+
+  function setButton(callback) {
+    callback;
+    if (active === launch) {
+      setLaunchActive(true);
+      setPortActive(false);
+      setCapsuleActive(false);
+      return;
+    }
+    if (active === port) {
+      setPortActive(true);
+      setLaunchActive(false);
+      setCapsuleActive(false);
+      return;
+    }
+    if (active === capsule) {
+      setCapsuleActive(true);
+      setLaunchActive(false);
+      setPortActive(false);
+      return;
+    }
+  }
 
   return (
     <Container fluid className={styles.TechWrapper}>
@@ -46,35 +67,29 @@ export default function TechnologyViewer() {
           <NumberedButton
             setActive={() => {
               document.querySelector(".swiper").swiper.slideTo(0, 800);
-              setActive(launch);
-              setLaunchActive(true);
-              setPortActive(false);
-              setCapsuleActive(false);
+              setButton(setActive(launch));
             }}
             style={{ backgroundColor: launchActive === true ? "white" : "transparent", borderColor: launchActive === true ? "white" : "#42444b", color: launchActive === true ? "var(--space-dark)" : "white" }}
             btnText="1"
+            label={"View " + launch.name}
           />
           <NumberedButton
             setActive={() => {
               document.querySelector(".swiper").swiper.slideTo(1, 800);
-              setActive(port);
-              setPortActive(true);
-              setLaunchActive(false);
-              setCapsuleActive(false);
+              setButton(setActive(port));
             }}
             style={{ backgroundColor: portActive === true ? "white" : "transparent", borderColor: portActive === true ? "white" : "#42444b", color: portActive === true ? "var(--space-dark)" : "white" }}
             btnText="2"
+            label={"View " + port.name}
           />
           <NumberedButton
             setActive={() => {
               document.querySelector(".swiper").swiper.slideTo(2, 800);
-              setActive(capsule);
-              setCapsuleActive(true);
-              setLaunchActive(false);
-              setPortActive(false);
+              setButton(setActive(capsule));
             }}
             style={{ backgroundColor: capsuleActive === true ? "white" : "transparent", borderColor: capsuleActive === true ? "white" : "#42444b", color: capsuleActive === true ? "var(--space-dark)" : "white" }}
             btnText="3"
+            label={"View " + capsule.name}
           />
         </Col>
         <Col xl={{ span: 5, order: 2 }} className={styles.TechData}>

@@ -13,11 +13,43 @@ export default function CrewViewer() {
   const victor = data.crew[2];
   const anousheh = data.crew[3];
 
-  const [active, setActive] = useState(douglas);
-  const [douglasActive, setDouglasActive] = useState(true);
+  const [active, setActive] = useState({});
+  const [douglasActive, setDouglasActive] = useState();
   const [markActive, setMarkActive] = useState(false);
   const [victorActive, setVictorActive] = useState(false);
   const [anoushehActive, setAnoushehActive] = useState(false);
+
+  function setButton(callback) {
+    callback;
+    if (active === douglas) {
+      setDouglasActive(true);
+      setMarkActive(false);
+      setVictorActive(false);
+      setAnoushehActive(false);
+      return;
+    }
+    if (active === mark) {
+      setMarkActive(true);
+      setDouglasActive(false);
+      setVictorActive(false);
+      setAnoushehActive(false);
+      return;
+    }
+    if (active === victor) {
+      setVictorActive(true);
+      setDouglasActive(false);
+      setMarkActive(false);
+      setAnoushehActive(false);
+      return;
+    }
+    if (active === anousheh) {
+      setAnoushehActive(true);
+      setDouglasActive(false);
+      setMarkActive(false);
+      setVictorActive(false);
+      return;
+    }
+  }
 
   return (
     <Container fluid className={classNames(styles.CrewWrapper, "px-0")}>
@@ -59,45 +91,34 @@ export default function CrewViewer() {
               <PaginationButton
                 setActive={() => {
                   document.querySelector(".swiper").swiper.slideTo(0, 800);
-                  setActive(douglas);
-                  setDouglasActive(true);
-                  setMarkActive(false);
-                  setVictorActive(false);
-                  setAnoushehActive(false);
+                  setButton(setActive(douglas));
                 }}
                 style={{ opacity: douglasActive === true ? "1" : "0.17" }}
+                label={"Select " + douglas.name}
               />
               <PaginationButton
                 setActive={() => {
                   document.querySelector(".swiper").swiper.slideTo(1, 800);
-                  setActive(mark);
-                  setMarkActive(true);
-                  setDouglasActive(false);
-                  setVictorActive(false);
-                  setAnoushehActive(false);
+                  setButton(setActive(mark));
                 }}
                 style={{ opacity: markActive === true ? "1" : "0.17" }}
+                label={"Select " + mark.name}
               />
               <PaginationButton
                 setActive={() => {
                   document.querySelector(".swiper").swiper.slideTo(2, 800);
-                  setActive(victor);
-                  setVictorActive(true);
-                  setDouglasActive(false);
-                  setMarkActive(false);
-                  setAnoushehActive(false);
+                  setButton(setActive(victor));
                 }}
                 style={{ opacity: victorActive === true ? "1" : "0.17" }}
+                label={"Select " + victor.name}
               />
               <PaginationButton
                 setActive={() => {
                   document.querySelector(".swiper").swiper.slideTo(3, 800);
-                  setAnoushehActive(true);
-                  setDouglasActive(false);
-                  setMarkActive(false);
-                  setVictorActive(false);
+                  setButton(setActive(anousheh));
                 }}
                 style={{ opacity: anoushehActive === true ? "1" : "0.17" }}
+                label={"Select " + anousheh.name}
               />
             </Col>
             <Col md={{ order: 1 }} xs={{ order: "last" }} className={styles.CrewData}>

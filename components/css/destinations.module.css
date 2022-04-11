@@ -118,11 +118,6 @@
     padding-inline-start: 141px;
   }
 
-  .DestinationWrapper h2 {
-    font-size: 80px;
-    line-height: 92px;
-  }
-
   .ImageWrapper {
     width: 50%;
   }
@@ -146,6 +141,7 @@
     max-width: 445px;
   }
   .TextColumn {
+    padding-inline: 0;
     max-width: 445px;
   }
 }
