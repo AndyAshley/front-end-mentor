@@ -60,10 +60,10 @@ export default function DestinationViewer() {
         <Row className="flex-column flex-xxl-row justify-content-center align-items-center g-0">
           <Col xxl={5} className={classNames(styles.ImageWrapper, "text-light text-center px-0")}>
             <Swiper className="destination-swiper mb-3 mb-xxl-0">
-              <SwiperSlide>{({ isActive }) => <img src={moon.images.webp} alt={"Image of " + active.name} className="mt-4 mt-xxl-0" {...(isActive ? (setActive(moon), setMoonActive(true)) : setMoonActive(false))} />}</SwiperSlide>
-              <SwiperSlide>{({ isActive }) => <img src={mars.images.webp} alt={"Image of " + active.name} className="mt-4 mt-xxl-0" {...(isActive ? (setActive(mars), setMarsActive(true)) : setMarsActive(false))} />}</SwiperSlide>
-              <SwiperSlide>{({ isActive }) => <img src={europa.images.webp} alt={"Image of " + active.name} className="mt-4 mt-xxl-0" {...(isActive ? (setActive(europa), setEuropaActive(true)) : setEuropaActive(false))} />}</SwiperSlide>
-              <SwiperSlide>{({ isActive }) => <img src={titan.images.webp} alt={"Image of " + active.name} className="mt-4 mt-xxl-0" {...(isActive ? (setActive(titan), setTitanActive(true)) : setTitanActive(false))} />}</SwiperSlide>
+              <SwiperSlide>{({ isActive }) => <img src={moon.images.webp} alt={"Image of " + moon.name} className="mt-4 mt-xxl-0" {...(isActive ? (setActive(moon), setMoonActive(true)) : setMoonActive(false))} />}</SwiperSlide>
+              <SwiperSlide>{({ isActive }) => <img src={mars.images.webp} alt={"Image of " + mars.name} className="mt-4 mt-xxl-0" {...(isActive ? (setActive(mars), setMarsActive(true)) : setMarsActive(false))} />}</SwiperSlide>
+              <SwiperSlide>{({ isActive }) => <img src={europa.images.webp} alt={"Image of " + europa.name} className="mt-4 mt-xxl-0" {...(isActive ? (setActive(europa), setEuropaActive(true)) : setEuropaActive(false))} />}</SwiperSlide>
+              <SwiperSlide>{({ isActive }) => <img src={titan.images.webp} alt={"Image of " + titan.name} className="mt-4 mt-xxl-0" {...(isActive ? (setActive(titan), setTitanActive(true)) : setTitanActive(false))} />}</SwiperSlide>
             </Swiper>
           </Col>
           <Col xxl={7} className={classNames(styles.TextColumn, "text-light text-center align-self-start")}>
