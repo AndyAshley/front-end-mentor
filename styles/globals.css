@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:ital,wght@0,400;0,500;1,700&display=swap");
+:root {
+  --light-red: hsl(356, 100%, 66%);
+  --v-light-red: hsl(355, 100%, 74%);
+  --v-dark-blue: hsl(208, 49%, 24%);
+  --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240, 2%, 79%);
+  --v-dark-grayish-blue: hsl(207, 13%, 34%);
+  --v-dark-black-blue: hsl(240, 10%, 16%);
+  --grad-light-red: hsl(13, 100%, 72%);
+  --grad-red: hsl(353, 100%, 62%);
+  --grad-gray-blue: hsl(237, 17%, 21%);
+  --grad-dark-blue: hsl(237, 23%, 32%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: "Overpass", sans-serif;
+}
+
+a,
+button a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-main {
+  outline: none;
+  border-radius: 2rem;
+  padding-inline: 1.3rem;
+  padding-block: 0.7rem;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.red-hover {
+  border: none;
+  background: var(--white);
+  transition: all 200ms ease-in-out;
+  color: var(--light-red);
+}
+
+.red-button-mobile {
+  background: linear-gradient(330deg, var(--grad-red), var(--grad-light-red));
+  border: var(--v-light-red);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.white-hover {
+  outline: none;
+  border: none;
+  color: var(--white);
+  box-shadow: inset 0 0 0px 1px var(--white);
+  background: transparent;
+  transition: all 200ms ease-in-out;
+}
+
+.button-transparent {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--white);
+}
+
+.button-transparent-mobile {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--v-dark-grayish-blue);
+  font-size: 1.2rem;
+}
+
+.font-primary {
+  font-family: "Overpass", sans-serif;
+}
+
+.font-secondary {
+  font-family: "Ubuntu", sans-serif;
+}
+
+@media (min-width: 1440px) {
+  .button-main {
+    min-width: 150px;
+  }
+  .red-hover:hover {
+    background: var(--v-light-red);
+    border: var(--v-light-red);
+    color: var(--white) !important;
+  }
+  .white-hover:hover {
+    background: var(--white);
+    color: var(--v-light-red);
+  }
+}

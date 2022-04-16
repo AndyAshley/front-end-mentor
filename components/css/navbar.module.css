@@ -1,0 +1,128 @@
+.NavLogo img {
+  display: block;
+  height: 35px;
+  width: auto;
+  align-self: flex-start !important;
+}
+
+.NavLinkWrapper {
+  display: none;
+}
+
+.NavLinks {
+  text-align: left;
+  color: var(--white);
+  margin-inline-start: 2rem;
+  position: relative;
+}
+
+.NavLinks button {
+  background: unset;
+  border: unset;
+  color: unset;
+  cursor: pointer;
+  min-width: 80px;
+  font-weight: bold;
+}
+
+.NavLinks span {
+  margin-left: 0.5rem;
+}
+
+.NavLinks span img {
+  transition: all ease-in-out;
+}
+
+.NavLinks button:hover {
+  text-decoration: underline;
+}
+
+.NavDropdown {
+  display: none;
+  padding: unset;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 150px;
+  background-color: var(--white);
+  color: var(--v-dark-blue);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  z-index: 20;
+}
+
+.NavDropdown li {
+  cursor: pointer;
+}
+
+.ButtonWrapper {
+  display: none;
+}
+
+.MobileWrapper {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  width: clamp(200px, 90%, 400px);
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  color: var(--v-dark-blue);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  padding-inline: 1.5rem;
+  padding-block: 2rem;
+}
+
+.MobileWrapper ul {
+  list-style-type: none;
+  padding: unset;
+  background-color: #efeff1;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 400ms ease;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+/* .NavLinks button:hover ~ .NavDropdown,
+.NavDropdown:hover {
+  display: block;
+} */
+
+@media (min-width: 768px) {
+  .MobileWrapper {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .NavLogo img {
+    margin-inline-start: 2rem;
+    height: 40px;
+  }
+  .NavLinkWrapper {
+    display: flex;
+  }
+  .ButtonWrapper {
+    display: block;
+  }
+  .NavDropdown li:hover {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 1440px) {
+  .NavLogo img {
+    margin-inline-start: 8rem;
+    height: 40px;
+  }
+  .NavLinkWrapper {
+    margin-inline-start: 2rem;
+  }
+  .ButtonWrapper {
+    display: block;
+    margin-inline-end: 8rem;
+  }
+}

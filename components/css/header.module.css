@@ -1,0 +1,42 @@
+.HeaderWrapper {
+  background-image: url(/images/bg-pattern-intro-mobile.svg), linear-gradient(330deg, var(--grad-red), var(--grad-light-red));
+  background-position: 35% 33%;
+  background-repeat: no-repeat;
+  height: 600px;
+  border-bottom-left-radius: 7rem;
+}
+.HeaderWrapper h1 {
+  color: white;
+  font-size: 2.2em;
+  font-weight: 400;
+  padding-inline: 1.8rem;
+  margin-block-start: 7.5rem;
+  margin-block-end: 1rem;
+}
+
+.HeaderWrapper p {
+  color: var(--white);
+  font-size: 1.2em;
+  padding-inline: 2rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .HeaderWrapper {
+    background-image: url(/images/bg-pattern-intro-desktop.svg), linear-gradient(to left, var(--grad-red) 50%, var(--grad-light-red));
+    background-position: 26% 52%;
+    background-size: 225%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .HeaderWrapper {
+  }
+  .HeaderWrapper h1 {
+    font-size: 3.7em;
+    font-weight: 700;
+  }
+  .HeaderWrapper p {
+    font-size: 1.25em;
+  }
+}
