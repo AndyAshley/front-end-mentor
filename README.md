@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/public/images/blogr-desktop.PNG)
+![](/public/images/blogr-desktop.png)
 ![](/public/images/blogr-mobile.png)
 
 ### Links
