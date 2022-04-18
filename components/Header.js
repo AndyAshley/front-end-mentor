@@ -1,4 +1,3 @@
-import Button from "./Button";
 import styles from "../components/css/header.module.css";
 import classNames from "classnames";
 import MainNavbar from "./Navbar";
