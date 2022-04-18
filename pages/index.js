@@ -12,7 +12,9 @@ export default function Home() {
         <title>Frontend Mentor | [Blogr]</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       </Head>
-      <Header />
+      <header>
+        <Header />
+      </header>
       <main>
         <Introduction />
         <Infrastructure />

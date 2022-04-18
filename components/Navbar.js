@@ -54,7 +54,7 @@ export default function MainNavbar() {
   }, [connect]);
 
   return (
-    <div className="container-fluid position-relative d-flex justify-content-between justify-content-md-start align-items-center py-5 px-4">
+    <nav className="container-fluid position-relative d-flex justify-content-between justify-content-md-start align-items-center py-5 px-4">
       <div className={styles.NavLogo}>
         <img src="/images/logo.svg" alt="Blogr Logo" />
       </div>
@@ -131,6 +131,7 @@ export default function MainNavbar() {
       </div>
       <button
         className="button-transparent"
+        title="Open Navigation"
         onClick={() => {
           setIsMobile(!isMobile);
         }}
@@ -195,6 +196,6 @@ export default function MainNavbar() {
           <button className="button-main red-button-mobile font-secondary mx-2">Sign Up</button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
