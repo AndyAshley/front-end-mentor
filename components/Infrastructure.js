@@ -5,7 +5,7 @@ export default function Infrastructure() {
   return (
     <div className={classNames(styles.RelativeWrapper, "container-fluid px-0")}>
       <div className={classNames(styles.InfrastructureWrapper, " d-flex flex-column justify-content-center")}>
-        <img src="images/bg-pattern-circles.svg" alt="Illustration of Mobile Phones" width="600px" />
+        <img src="images/bg-pattern-circles.svg" alt="Illustration of Mobile Phones" />
         <div className="row">
           <div className="col-12 col-lg-6"></div>
           <div className="col-12 col-lg-6">
