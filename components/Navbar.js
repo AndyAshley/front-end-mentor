@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
 import styles from "../components/css/navbar.module.css";
 
-export default function Navbar() {
+export default function MainNavbar() {
   const [product, setProduct] = useState(false);
   const [productMobile, setProductMobile] = useState(false);
   const [company, setCompany] = useState(false);
@@ -11,12 +11,15 @@ export default function Navbar() {
   const [connectMobile, setConnectMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const productRef = useRef();
+  const productBtnRef = useRef();
   const companyRef = useRef();
+  const companyBtnRef = useRef();
   const connectRef = useRef();
+  const connectBtnRef = useRef();
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
-      if (product && productRef.current && !productRef.current.contains(e.target)) {
+      if (product && productRef.current && !productRef.current.contains(e.target) && !productBtnRef.current.contains(e.target)) {
         setProduct(false);
       }
     };
@@ -28,7 +31,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
-      if (company && companyRef.current && !companyRef.current.contains(e.target)) {
+      if (company && companyRef.current && !companyRef.current.contains(e.target) && !companyBtnRef.current.contains(e.target)) {
         setCompany(false);
       }
     };
@@ -40,7 +43,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
-      if (connect && connectRef.current && !connectRef.current.contains(e.target)) {
+      if (connect && connectRef.current && !connectRef.current.contains(e.target) && !connectBtnRef.current.contains(e.target)) {
         setConnect(false);
       }
     };
@@ -51,7 +54,7 @@ export default function Navbar() {
   }, [connect]);
 
   return (
-    <div className="container-fluid position-relative d-flex justify-content-between justify-content-md-start align-items-center my-5 px-4">
+    <div className="container-fluid position-relative d-flex justify-content-between justify-content-md-start align-items-center py-5 px-4">
       <div className={styles.NavLogo}>
         <img src="/images/logo.svg" alt="Blogr Logo" />
       </div>
@@ -62,6 +65,7 @@ export default function Navbar() {
               onClick={() => {
                 setProduct(!product);
               }}
+              ref={productBtnRef}
             >
               Product
               <span>
@@ -83,6 +87,7 @@ export default function Navbar() {
               onClick={() => {
                 setCompany(!company);
               }}
+              ref={companyBtnRef}
             >
               Company
               <span>
@@ -103,6 +108,7 @@ export default function Navbar() {
               onClick={() => {
                 setConnect(!connect);
               }}
+              ref={connectBtnRef}
             >
               Connect
               <span>

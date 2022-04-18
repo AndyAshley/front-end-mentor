@@ -2,10 +2,9 @@ import styles from "@components/css/Footer.module.css";
 import classNames from "classnames";
 
 export default function Footer() {
-
   return (
     <>
-      <footer className={classNames(styles.FooterWrapper, "py-5")}>
+      <footer className={classNames(styles.FooterWrapper, "py-5 position-relative")}>
         <div className={classNames(styles.Footer, "d-flex flex-column flex-md-row justify-content-around")}>
           <img src="/images/logo.svg" alt="blogr Logo" className="align-self-center align-self-md-start" />
           <div className="pt-5 pt-md-0 align-self-md-start">
@@ -35,6 +34,13 @@ export default function Footer() {
               <li>LinkedIn</li>
             </ul>
           </div>
+        </div>
+        <div className="attribution">
+          Challenge by{" "}
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor
+          </a>
+          . Coded by <a href="https://www.frontendmentor.io/profile/AndyAshley">Andy</a>.
         </div>
       </footer>
     </>
